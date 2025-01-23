@@ -1,0 +1,18 @@
+@import 'header';
+@import 'footer';
+@import 'homepage';
+@import 'services';
+@import 'contact';
+@import 'aboutus';
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main{
+  padding-top: 8rem;
+}

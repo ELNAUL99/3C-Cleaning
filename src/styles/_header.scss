@@ -22,22 +22,22 @@
     flex-grow: 1;
     justify-content: center;
     position: relative;
-    left: -3rem;
+    left: -2.75%;
 
     .nav-left{
       position: relative;
-      left: -15rem;
+      left: -15%;
     }
 
     .nav-right{
       position: relative;
-      left: 8rem;
+      left: 5%;
     }
 
     .nav-left, .nav-right {
       list-style: none;
       display: flex;
-      gap: 8rem; // Adjusted gap for closer alignment
+      gap: 6rem; 
       align-items: center;
 
       li {

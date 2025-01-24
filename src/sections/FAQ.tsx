@@ -11,10 +11,14 @@ const faqs = [
 ];
 
 const Faq: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [openIndices, setOpenIndices] = useState<number[]>([]);
 
   const toggleFaq = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
+    if (openIndices.includes(index)) {
+      setOpenIndices(openIndices.filter((i) => i !== index));
+    } else {
+      setOpenIndices([...openIndices, index]);
+    }
   };
 
   return (
@@ -28,9 +32,9 @@ const Faq: React.FC = () => {
             <div key={index} className="faq-item">
               <div className="faq-question" onClick={() => toggleFaq(index)}>
                 <h3>{faq.question}</h3>
-                <FontAwesomeIcon icon={activeIndex === index ? faChevronUp : faChevronDown} />
+                <FontAwesomeIcon icon={openIndices.includes(index) ? faChevronUp : faChevronDown} />
               </div>
-              {activeIndex === index && (
+              {openIndices.includes(index) && (
                 <div className="faq-answer">
                   <p>{faq.answer}</p>
                 </div>

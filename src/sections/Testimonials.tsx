@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import '../styles/_testimonials.scss';
+import feedbackImage1 from '../assets/feedback1.jpg';
+import feedbackImage2 from '../assets/feedback2.jpg';
+import feedbackImage3 from '../assets/feedback3.jpg';
 
 const testimonials = [
-  { text: "3C Cleaning did an amazing job at our office! Highly recommend their services.", author: "John Doe" },
-  { text: "Great service and friendly staff. My home has never been this clean.", author: "Jane Smith" },
-  { text: "Excellent work! They were professional and thorough.", author: "Robert Johnson" }
+  { feedbackImage: feedbackImage1 },
+  { feedbackImage: feedbackImage2 },
+  { feedbackImage: feedbackImage3 }
 ];
 
 const Testimonials: React.FC = () => {
@@ -24,10 +27,14 @@ const Testimonials: React.FC = () => {
       <div className="testimonial-slider">
         <button className="prev-btn" onClick={handlePrev}>❮</button>
         <div className="testimonial-item">
-          <p>"{testimonials[currentIndex].text}"</p>
-          <p>- {testimonials[currentIndex].author}</p>
+          <img src={testimonials[currentIndex].feedbackImage} alt={`Feedback ${currentIndex + 1}`} className="testimonial-feedback-image" />
         </div>
         <button className="next-btn" onClick={handleNext}>❯</button>
+      </div>
+      <div className="testimonial-dots">
+        {testimonials.map((_, index) => (
+          <span key={index} className={`dot ${index === currentIndex ? 'active' : ''}`} />
+        ))}
       </div>
     </section>
   );

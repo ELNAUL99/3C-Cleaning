@@ -1,30 +1,63 @@
 .footer {
-  background-color: #354d40; // Updated background color
-  color: white; // Updated font color
-  padding: 1rem;
+  background-color: #354d40; // Original background color for the upper footer
+  color: white;
+  padding: 3rem 0 0 0;
   text-align: center;
 
-  .footer-content {
+  .footer-icons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    gap: 3rem; // Space between icons
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        color: #25D366; // WhatsApp green color for hover
+      }
+    }
+  }
+
+  .footer-nav {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+
+      li {
+        margin: 0 2rem;
+
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 1.2rem;
+
+          &:hover {
+            text-decoration: underline;
+            color: #aad2ba;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    background-color: #1b241c; // Double darker background color for the footer bottom
+    padding: 1rem;
+    font-size: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    box-sizing: border-box; 
 
     p {
       margin: 0;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 1rem;
-
-      a {
-        color: white; // Icon color
-
-        &:hover {
-          color: #aad2ba; // Lighter shade for hover effect
-        }
-      }
+      text-align: center;
     }
   }
 }

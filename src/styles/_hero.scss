@@ -1,53 +1,81 @@
 .hero {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2rem 1rem;
-    background-color: #f5f5f5;
-  
-    .hero-image {
-      flex: 1;
-      max-width: 45%;
-  
-      img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-  
-      &.image-right {
-        margin-top: 1rem;
-      }
+  position: relative;
+  text-align: center;
+  height: 150vh; // Set height to full viewport height
+  background-color: #eef0f2;
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 2rem;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
-  
-    .hero-text {
-      flex: 1;
-      text-align: center;
-  
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-      }
-  
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .mission-content {
+    position: relative;
+    z-index: 1;
+    margin-top: 4rem; // Adjust the margin as needed
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .mission-paragraphs {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem; // Space between the paragraphs
+
       p {
+        flex: 1;
         font-size: 1.2rem;
-        margin-bottom: 1rem;
-      }
-  
-      button {
-        padding: 0.5rem 1.5rem;
-        background-color: #354d40;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1rem;
-        margin: 0 0.5rem;
-  
-        &:hover {
-          background-color: #2e4034;
-        }
+        line-height: 1.5;
       }
     }
   }
-  
+
+  .hero-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none; // Ensures images are not interactable
+
+    .hero-image {
+      position: absolute;
+
+      &.image1 {
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+      }
+
+      &.image2 {
+        top: 50%;
+        right: 0;
+        width: auto;
+        height: auto;
+        transform: translateY(-50%);
+      }
+
+      &.image3 {
+        bottom: -100px; // Adjusted bottom value to ensure image fits
+        left: 30%;
+        width: auto;
+        height: auto;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

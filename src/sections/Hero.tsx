@@ -16,6 +16,13 @@ const Hero: React.FC = () => {
         <h1>Welcome to 3C Cleaning</h1>
         <p>Your trusted partner for all your cleaning needs.</p>
       </div>
+      <div className="mission-content">
+        <h2>OUR MISSION</h2>
+        <div className="mission-paragraphs">
+          <p>Cleaning excellence meets reliability. Our family-owned cleaning service combines expertise with a personal touch, ensuring that every cleaning session meets your specific needs. We are committed to providing a spotless home while using eco-friendly products that are safe for your family and pets.</p>
+          <p>With years of experience in the cleaning industry, we blend effective techniques with a commitment to customer satisfaction. Our goal is to provide services that not only clean but also enhance the comfort and beauty of your home.</p>
+        </div>
+      </div>
     </section>
   );
 };

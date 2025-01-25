@@ -3,11 +3,17 @@ import '../styles/_testimonials.scss';
 import feedbackImage1 from '../assets/feedback1.jpg';
 import feedbackImage2 from '../assets/feedback2.jpg';
 import feedbackImage3 from '../assets/feedback3.jpg';
+import feedbackImage4 from '../assets/feedback4.png';
+import feedbackImage5 from '../assets/feedback5.png';
+import feedbackImage6 from '../assets/feedback6.png';
 
 const testimonials = [
   { feedbackImage: feedbackImage1 },
   { feedbackImage: feedbackImage2 },
-  { feedbackImage: feedbackImage3 }
+  { feedbackImage: feedbackImage3 },
+  { feedbackImage: feedbackImage4 },
+  { feedbackImage: feedbackImage5 },
+  { feedbackImage: feedbackImage6 }
 ];
 
 const Testimonials: React.FC = () => {

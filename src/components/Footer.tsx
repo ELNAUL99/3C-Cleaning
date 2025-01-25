@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer-icons">
-        <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/profile.php?id=61565753254534" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faFacebook} size="2x" />
         </a>
         <a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener noreferrer">

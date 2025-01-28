@@ -12,7 +12,7 @@ const AboutUs: React.FC = () => {
       <div className="about-section">
         <div className="about-item">
           <div className="about-content">
-            <h3>Clean</h3>
+            <h3>Cleaning</h3>
             <p>
               At 3C Cleaning, cleanliness is at the heart of everything we do. We understand that a clean environment is not just about aesthetics,
               but also about creating a healthy and productive space for you and your loved ones. Our expert team uses state-of-the-art equipment and

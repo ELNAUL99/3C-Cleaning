@@ -32,26 +32,12 @@
 
     h2 {
       font-size: 2.5rem;
+      color: #fff;
 
       .changing-word {
         color: #b3d4c6; // Color for the changing word
-        animation: bounceIn 3.5s ease-in-out infinite;
+        display: inline-block; // Needed for animation to apply correctly
       }
     }
-  }
-}
-
-@keyframes bounceIn {
-  0%, 10% {
-    opacity: 0;
-    transform: translateY(-30px); // Start above
-  }
-  30%, 50% {
-    opacity: 1;
-    transform: translateY(0); // Bounce in
-  }
-  80%, 100% {
-    opacity: 1;
-    transform: translateY(0); // Settle in place
   }
 }

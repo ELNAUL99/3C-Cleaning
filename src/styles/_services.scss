@@ -32,9 +32,11 @@
       width: 50%;
       margin: 0 auto;
       background-color: #fff;
+      height: calc(100% + 4rem);
 
       .package {
         flex: 1;
+        padding: 4rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -43,24 +45,31 @@
         border-radius: 0.5rem 0 0 0.5rem;
         background-size: cover;
         background-repeat: no-repeat;
-        background-image: url('../assets/priceBackground.jpg');
+        background-image: url('../assets/priceBackground.png');
 
         h3 {
-          font-size: 1.5rem;
+          font-size: 2rem;
           margin-bottom: 1rem;
+          font-weight: 900;
+          color: #000;
+          text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;
         }
 
         p {
-          font-size: 1rem;
+          font-size: 1.5rem;
+          font-weight: 900;
+          color: #000;
+          text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;
         }
       }
+      
 
       .estimation-form {
         flex: 1;
         background-color: #fff;
         border: 1px solid #ddd;
         border-radius: 0 1rem 1rem 0;
-        padding: 1rem;
+        padding: 4rem;
 
         .form-group {
           margin-bottom: 1rem;

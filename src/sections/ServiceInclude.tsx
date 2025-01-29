@@ -17,8 +17,7 @@ const ServiceInclude: React.FC = () => {
   const services = [
     { 
       question: "Generally, in all facilities", 
-      answer: `
-      - Dusting of horizontal surfaces (at the height of max. 1.8 meters)
+      answer: `- Dusting of horizontal surfaces (at the height of max. 1.8 meters)
       - Cleaning stains from doors, door handles, and light switches
       - Wiping mirrors and glass surfaces (excluding windows)
       - Dusting window sills (at the height of max. 1.8m)
@@ -30,8 +29,7 @@ const ServiceInclude: React.FC = () => {
     },
     { 
       question: "In the kitchen", 
-      answer: `
-      - Cleaning the sink and faucets
+      answer: `- Cleaning the sink and faucets
       - Cleaning horizontal surfaces (at the height of max. 1.8 m)
       - Cleaning the stove
       - Cleaning the splashback tiles
@@ -44,8 +42,7 @@ const ServiceInclude: React.FC = () => {
     },
     { 
       question: "Bathroom and WC", 
-      answer: `
-      - Cleaning of horizontal surfaces (max 1.8 m high)
+      answer: `- Cleaning of horizontal surfaces (max 1.8 m high)
       - Washing the sink and the bathtub
       - Cleaning the toilet seat and its surroundings
       - Cleaning of faucets and shower head
@@ -66,8 +63,7 @@ const ServiceInclude: React.FC = () => {
     },
     { 
       question: "Additionally, upon request", 
-      answer: `
-      - Emptying and taking out the garbage (requires access to the garbage shelter)
+      answer: `- Emptying and taking out the garbage (requires access to the garbage shelter)
       - Moving heavy furniture (over 6 kg) and cleaning behind it
       - Cleaning the balcony (e.g., floor, furniture)
       - Cleaning the cabinets from the inside

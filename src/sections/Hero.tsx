@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import 'animate.css';
 import '../styles/_hero.scss';
 import { Link } from 'react-router-dom';
-import backgroundImage from '../assets/herobackground.png'; // Update path to your actual background image file
+import backgroundImage from '../assets/herobackground.png';
+import { Link as ScrollLink } from 'react-scroll';
 
 const words = ["trustworthy", "dependable", "reliable", "faithful", "honest", "reputable"];
 
@@ -32,8 +33,8 @@ const Hero: React.FC = () => {
           Your <span className={`changing-word ${animationClass}`}>{currentWord}</span> cleaning service
         </h2>
         <div className="hero-buttons">
-          <Link to="/about" className="hero-button">Learn more</Link>
-          <a href="#order-section" className="hero-button primary">Order now</a>
+          <Link to="/aboutus" className="hero-button">Learn more</Link>
+          <ScrollLink to="order-section" smooth={true} duration={1000} className="hero-button primary">Order now</ScrollLink>
         </div>
       </div>
     </section>

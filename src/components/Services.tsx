@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/_services.scss';
 import ServiceInclude from '../sections/ServiceInclude'; // Ensure this path is correct
 
@@ -19,20 +19,25 @@ const Services: React.FC = () => {
           </div>
         </div>
         <div className="offer-section">
-          <div className="offer-warning">More than 40% off</div>
           <div className="offer-caption">First-time Customer Offer</div>
           <div className="packages">
             <div className="package first-time">
-              <div className="offer-notification">43% off</div>
+              <div className="offer-notification">
+                <span>43% off</span>
+              </div>
               <h3>First Time Package 1</h3>
-              <p>65 €/3h (include VAT)</p>
-              <p>Home cleaning or Deep Cleaning ***</p>
+              <p className='offer-price'>65 €/3h (include VAT) ***</p>
+              <p>Home cleaning or deep cleaning</p>
+              <p className="note">** Any extra hour will be charged at normal price</p>
             </div>
             <div className="package first-time">
-              <div className="offer-notification">47% off</div>
+              <div className="offer-notification">
+                <span>47% off</span>
+              </div>
               <h3>First Time Package 2</h3>
-              <p>100 €/5h (include VAT)</p>
-              <p>Home cleaning or Deep Cleaning ***</p>
+              <p className='offer-price'>100 €/5h (include VAT) ***</p>
+              <p>Home cleaning or deep cleaning</p>
+              <p className="note">** Any extra hour will be charged at normal price</p>
             </div>
           </div>
         </div>
@@ -47,6 +52,15 @@ const EstimationCalculator: React.FC = () => {
   const [floorCount, setFloorCount] = useState('');
   const [houseSize, setHouseSize] = useState('');
   const [estimatedTime, setEstimatedTime] = useState<string | number | null>(null);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
+  useEffect(() => {
+    if (housingType && (floorCount || housingType === 'kerrostalo') && houseSize) {
+      setIsButtonDisabled(false);
+    } else {
+      setIsButtonDisabled(true);
+    }
+  }, [housingType, floorCount, houseSize]);
 
   const calculateTime = () => {
     let baseTime = 0;
@@ -56,6 +70,7 @@ const EstimationCalculator: React.FC = () => {
     else if (houseSize === '51m2-60m2') baseTime = 3;
     else if (houseSize === '61m2-70m2') baseTime = 3.5;
     else if (houseSize === '71m2-80m2') baseTime = 4;
+    else if (houseSize === 'larger than 80m2') baseTime = 4.5;
 
     if (housingType === 'rivitalo' || housingType === 'omatalo' || housingType === 'paritalo') {
       if (floorCount) baseTime *= parseInt(floorCount);
@@ -63,7 +78,7 @@ const EstimationCalculator: React.FC = () => {
 
     if (floorCount === '3+' || houseSize === 'larger than 80m2') {
       if (floorCount) baseTime *= parseInt(floorCount);
-      setEstimatedTime(`More than ${baseTime} hours`);
+      setEstimatedTime(`More than ${baseTime}`);
       return;
     }
 
@@ -74,31 +89,26 @@ const EstimationCalculator: React.FC = () => {
     <div className="estimation-calculator">
       <h3>Estimate Your Cleaning Time</h3>
       <div className="form-group">
-        <label>Housing Type</label>
         <select value={housingType} onChange={(e) => setHousingType(e.target.value)}>
-          <option value="">Select</option>
+          <option value="" disabled>Select Housing Type</option>
           <option value="omatalo">Omatalo</option>
           <option value="rivitalo">Rivitalo</option>
           <option value="paritalo">Paritalo</option>
           <option value="kerrostalo">Kerrostalo</option>
         </select>
       </div>
-      {(housingType === 'rivitalo' || housingType === 'omatalo' || housingType === 'paritalo') && (
-        <div className="form-group">
-          <label>Number of Floors</label>
-          <select value={floorCount} onChange={(e) => setFloorCount(e.target.value)}>
-            <option value="">Select</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="3+">3+</option>
-          </select>
-        </div>
-      )}
       <div className="form-group">
-        <label>House Size</label>
+        <select value={floorCount} onChange={(e) => setFloorCount(e.target.value)} disabled={housingType === 'kerrostalo'}>
+          <option value="" disabled>Select Number of Floors</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="3+">3+</option>
+        </select>
+      </div>
+      <div className="form-group">
         <select value={houseSize} onChange={(e) => setHouseSize(e.target.value)}>
-          <option value="">Select</option>
+          <option value="" disabled>Select House Size</option>
           <option value="smaller than 41m2">Smaller than 41m2</option>
           <option value="41m2-50m2">41m2-50m2</option>
           <option value="51m2-60m2">51m2-60m2</option>
@@ -107,10 +117,11 @@ const EstimationCalculator: React.FC = () => {
           <option value="larger than 80m2">Larger than 80m2</option>
         </select>
       </div>
-      <button onClick={calculateTime}>Calculate</button>
+      <button onClick={calculateTime} disabled={isButtonDisabled}>Calculate</button>
       {estimatedTime !== null && (
         <div className="estimated-time">
-          <p>Estimated Cleaning Time: {estimatedTime}</p>
+          <p>Estimated Cleaning Time: {estimatedTime} hours *</p>
+          <p className="note">* The final hours will depend on the frequency of cleaning, your lifestyle, the amount of furniture and other details of your home. You can also request a specific number of cleaning hours. The minimum order is 2h.</p>
         </div>
       )}
     </div>

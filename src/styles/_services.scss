@@ -4,7 +4,7 @@
   position: relative;
   background-size: cover;
   background-position: center;
-  background-image: url('../assets/subheadingBackground.jpg');
+  background-image: url('../assets/subheaderBackground.png');
 
   .services-heading {
     width: 100%;
@@ -23,6 +23,7 @@
   .content-layer {
     background-color: #f9f9f9;
     padding: 5rem 2rem;
+    min-height: 100vh;
 
     .estimation-section {
       display: flex;
@@ -62,7 +63,6 @@
           text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;
         }
       }
-      
 
       .estimation-form {
         flex: 1;
@@ -74,16 +74,12 @@
         .form-group {
           margin-bottom: 1rem;
 
-          label {
-            display: block;
-            margin-bottom: 0.5rem;
-          }
-
           select {
             width: 100%;
             padding: 0.5rem;
             border-radius: 5px;
             border: 1px solid #ddd;
+            font-weight: 500;
           }
         }
 
@@ -103,6 +99,13 @@
         .estimated-time {
           margin-top: 1rem;
           font-weight: bold;
+
+          .note {
+            font-weight: lighter;
+            font-size: 0.8rem;
+            font-style: italic;
+            margin-top: 0.5rem; 
+          }
         }
       }
     }
@@ -110,47 +113,50 @@
     .offer-section {
       text-align: center;
       margin: 5rem 0;
-      position: relative;
-
-      .offer-warning {
-        font-size: 1.2rem;
-        color: #e74c3c;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: rotate(-45deg);
-        transform-origin: left top;
-        background-color: #fff;
-        padding: 0.5rem;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-      }
 
       .offer-caption {
-        font-size: 2rem;
+        font-size: 3rem;
         margin-bottom: 1rem;
+        font-weight: 900;
       }
 
       .packages {
         display: flex;
         justify-content: center;
         gap: 2rem;
+        margin-top: 2rem;
 
         .package {
           border: 1px solid #ddd;
-          padding: 1rem;
+          padding: 2rem; 
           border-radius: 0.5rem;
           position: relative;
-          width: 300px;
+          width: 350px; 
+          background-color: #f0f8ff;
 
           .offer-notification {
             position: absolute;
             top: 0;
             left: 0;
-            background-color: #e74c3c; // Hot color for the notification
+            width: 0;
+            height: 0;
+            border-left: 100px solid #e74c3c; 
+            border-bottom: 100px solid transparent;
             color: #fff;
-            padding: 0.5rem;
             font-weight: bold;
-            border-radius: 0.5rem 0 0 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform-origin: left top;
+            border-radius: 0.5rem 0 0 0;
+
+            span {
+              position: absolute;
+              top: 1.5rem; 
+              left: -5.75rem; 
+              white-space: nowrap;
+              transform: rotate(315deg); 
+            }
           }
 
           h3 {
@@ -162,57 +168,19 @@
             font-size: 1rem;
           }
 
+          .offer-price {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #d32f2f;
+          }
+
+          .note {
+            margin-top: 1rem;
+            font-style: italic;
+          }
+
           &.first-time {
             background-color: #f0f8ff;
-          }
-        }
-      }
-    }
-
-    .service-include {
-      background-color: #f9f9f9;
-      padding: 2rem;
-      border-radius: 10px;
-      max-width: 800px;
-      margin: 2rem auto;
-
-      h3 {
-        text-align: center;
-        margin-bottom: 2rem;
-      }
-
-      .service-list {
-        .service-item {
-          border-bottom: 1px solid #ddd;
-          padding: 1rem 0;
-
-          &:last-child {
-            border-bottom: none;
-          }
-
-          .service-question {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-
-            h4 {
-              margin: 0;
-            }
-
-            svg {
-              margin-left: 1rem;
-            }
-          }
-
-          .service-answer {
-            margin-top: 1rem;
-            text-align: left;
-            
-            p {
-              margin: 0;
-              white-space: pre-line;
-            }
           }
         }
       }

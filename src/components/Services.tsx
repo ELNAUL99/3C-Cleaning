@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/_services.scss';
+import ServiceInclude from '../sections/ServiceInclude'; // Ensure this path is correct
 
 const Services: React.FC = () => {
   return (
@@ -8,23 +9,34 @@ const Services: React.FC = () => {
         <h2>Our Services</h2>
       </div>
       <div className="content-layer">
-        <div className="price-packages">
-          <div className="package first-time">
-            <div className="offer-notification">More than 40% off</div>
-            <h3>First Time Package 1</h3>
-            <p>3 hours of home or deep cleaning for 65 EUR (save 43%) ***</p>
-          </div>
-          <div className="package first-time">
-            <div className="offer-notification">More than 40% off</div>
-            <h3>First Time Package 2</h3>
-            <p>5 hours of home or deep cleaning for 100 EUR (save 47%) ***</p>
-          </div>
+        <div className="estimation-section">
           <div className="package regular">
-            <h3>Regular Package</h3>
-            <p>38 EUR per hour cleaning</p>
+            <h3>Home Cleaning</h3>
+            <p>38 €/h (include VAT)</p>
+          </div>
+          <div className="estimation-form">
+            <EstimationCalculator />
           </div>
         </div>
-        <EstimationCalculator />
+        <div className="offer-section">
+          <div className="offer-warning">More than 40% off</div>
+          <div className="offer-caption">First-time Customer Offer</div>
+          <div className="packages">
+            <div className="package first-time">
+              <div className="offer-notification">43% off</div>
+              <h3>First Time Package 1</h3>
+              <p>65 €/3h (include VAT)</p>
+              <p>Home cleaning or Deep Cleaning ***</p>
+            </div>
+            <div className="package first-time">
+              <div className="offer-notification">47% off</div>
+              <h3>First Time Package 2</h3>
+              <p>100 €/5h (include VAT)</p>
+              <p>Home cleaning or Deep Cleaning ***</p>
+            </div>
+          </div>
+        </div>
+        <ServiceInclude />
       </div>
     </section>
   );
@@ -44,7 +56,6 @@ const EstimationCalculator: React.FC = () => {
     else if (houseSize === '51m2-60m2') baseTime = 3;
     else if (houseSize === '61m2-70m2') baseTime = 3.5;
     else if (houseSize === '71m2-80m2') baseTime = 4;
-    else if (houseSize === 'larger than 80m2') baseTime = 4.5;
 
     if (housingType === 'rivitalo' || housingType === 'omatalo' || housingType === 'paritalo') {
       if (floorCount) baseTime *= parseInt(floorCount);

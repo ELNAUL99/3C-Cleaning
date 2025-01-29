@@ -1,3 +1,6 @@
+@import 'animate.css';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
 .hero {
   background-size: cover;
   background-position: center;
@@ -16,7 +19,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); // Dark overlay for better text visibility
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
 
@@ -32,11 +35,37 @@
 
     h2 {
       font-size: 2.5rem;
+      margin-bottom: 2rem;
       color: #fff;
 
       .changing-word {
-        color: #b3d4c6; // Color for the changing word
-        display: inline-block; // Needed for animation to apply correctly
+        color: #b3d4c6;
+        display: inline-block;
+      }
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 5rem;
+      justify-content: center;
+    }
+
+    .hero-button {
+      font-family: 'Nunito Sans', sans-serif;
+      padding: 0.8rem 1.5rem;
+      font-size: 1.5rem;
+      font-weight:900;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      text-decoration: none;
+      background-color: #354d40;
+      color: #fff;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #aad2ba;
+        color: #112A46;
       }
     }
   }

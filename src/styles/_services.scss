@@ -1,98 +1,118 @@
 .services {
-  padding: 2rem;
+  padding: 0;
   text-align: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../assets/subheadingBackground.jpg'); 
+  background-attachment: scroll; 
 
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+  .services-heading {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    h2 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-align: left;
+    }
   }
 
-  .price-packages {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+  .content-layer {
+    background-color: #f9f9f9; 
+    padding: 5rem 2rem;
 
-    .package {
-      border: 1px solid #ddd;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      position: relative;
-      width: 300px;
+    .price-packages {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
 
-      .offer-notification {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #ffcc00;
-        color: #000;
-        padding: 0.5rem;
-        font-weight: bold;
-        border-radius: 0.5rem 0 0 0.5rem;
+      .package {
+        border: 1px solid #ddd;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        position: relative;
+        width: 300px;
+
+        .offer-notification {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #ffcc00;
+          color: #000;
+          padding: 0.5rem;
+          font-weight: bold;
+          border-radius: 0.5rem 0 0 0.5rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
       }
 
+      .first-time {
+        background-color: #f0f8ff;
+      }
+
+      .regular {
+        background-color: #fff;
+      }
+    }
+
+    .estimation-calculator {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 500px;
+      margin: 5rem auto;
+
       h3 {
-        font-size: 1.5rem;
         margin-bottom: 1rem;
       }
 
-      p {
-        font-size: 1rem;
+      .form-group {
+        margin-bottom: 1rem;
+
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+
+        select {
+          width: 100%;
+          padding: 0.5rem;
+          border-radius: 5px;
+          border: 1px solid #ddd;
+        }
       }
-    }
 
-    .first-time {
-      background-color: #f0f8ff;
-    }
+      button {
+        padding: 0.5rem 2rem;
+        border: none;
+        border-radius: 5px;
+        background-color: #354d40;
+        color: #fff;
+        cursor: pointer;
 
-    .regular {
-      background-color: #fff;
-    }
-  }
+        &:hover {
+          background-color: #aad2ba;
+        }
+      }
 
-  .estimation-calculator {
-    margin-top: 3rem;
-
-    h3 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .form-group {
-      margin-bottom: 1.5rem;
-
-      label {
-        display: block;
-        margin-bottom: 0.5rem;
+      .estimated-time {
+        margin-top: 1rem;
         font-weight: bold;
       }
-
-      select {
-        width: 100%;
-        padding: 0.5rem;
-        border: 1px solid #ddd;
-        border-radius: 0.5rem;
-      }
-    }
-
-    button {
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      background-color: #354d40;
-      color: #fff;
-      border: none;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: #aad2ba;
-      }
-    }
-
-    .estimated-time {
-      margin-top: 2rem;
-      font-size: 1.2rem;
-      font-weight: bold;
     }
   }
 }

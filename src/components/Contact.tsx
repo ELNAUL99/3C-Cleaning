@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import '../styles/_contact.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faBuilding, faEnvelope, faMap, faMapLocationDot, faPhone, faStore } from '@fortawesome/free-solid-svg-icons';
 
 const Contact: React.FC = () => {
   const [formStatus, setFormStatus] = useState('');
@@ -10,7 +11,9 @@ const Contact: React.FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phonenumber, setPhoneNumber] = useState('');
-  const [message, setMessage] = useState('');
+  const [apartmentType, setApartmentType] = useState('');
+  const [floors, setFloors] = useState('');
+  const [size, setSize] = useState('');
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,18 +25,22 @@ const Contact: React.FC = () => {
     const templateParams = {
       from_name: name,
       from_email: email,
-      to_name: '3C Cleaning',
       from_phonenumber: phonenumber,
-      message: message,
+      to_name: '3C Cleaning',
+      from_apartment_type: apartmentType,
+      floors: floors || '1',
+      from_apartment_size: size,
     };
 
     emailjs.send(serviceID, templateID, templateParams, publicKey)
       .then((result) => {
         setFormStatus('Message sent successfully!');
-        setName('');  // Clear the form fields
+        setName('');
         setEmail('');
         setPhoneNumber('');
-        setMessage('');
+        setApartmentType('');
+        setFloors('');
+        setSize('');
       }, (error) => {
         setFormStatus('Failed to send message. Please try again later.');
         console.error('EmailJS error:', error);
@@ -46,20 +53,86 @@ const Contact: React.FC = () => {
         <h2>Contact Us</h2>
         <form onSubmit={sendEmail}>
           <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input type="text" id="name" name="name" required value={name} onChange={(e) => setName(e.target.value)} />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
           <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <div className="form-group">
-            <label htmlFor="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" required value={phonenumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Phone"
+              required
+              value={phonenumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+            />
           </div>
           <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" required value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+            <select
+              id="apartment-type"
+              name="apartment-type"
+              required
+              value={apartmentType}
+              onChange={(e) => setApartmentType(e.target.value)}
+            >
+              <option value="">Type of Apartment</option>
+              <option value="omatalo">Omatalo</option>
+              <option value="paritalo">Paritalo</option>
+              <option value="rivitalo">Rivitalo</option>
+              <option value="kerrostalo">Kerrostalo</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <select
+              id="floors"
+              name="floors"
+              required
+              disabled={apartmentType === 'kerrostalo'}
+              value={floors}
+              onChange={(e) => setFloors(e.target.value)}
+            >
+              <option value="">Number of Floors</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="4+">4+</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <select
+              id="size"
+              name="size"
+              required
+              value={size}
+              onChange={(e) => setSize(e.target.value)}
+            >
+              <option value="">Size (m²)</option>
+              <option value="Under 40">Under 40</option>
+              <option value="41-50">41-50</option>
+              <option value="51-60">51-60</option>
+              <option value="61-70">61-70</option>
+              <option value="71-80">71-80</option>
+              <option value="Above 80">Above 80</option>
+            </select>
           </div>
           <button type="submit">Submit</button>
         </form>
@@ -67,9 +140,10 @@ const Contact: React.FC = () => {
       </div>
       <div className="contact-info-section">
         <h3>Contact Information</h3>
-        <p>3C Cleaning Oy</p>
-        <p>Espoo, Finland</p>
-        <p>Phone: +358 45 1438656 <a href="https://wa.me/358451438656" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faWhatsapp} size="2x" /></a></p>
+        <p><FontAwesomeIcon icon={faBuilding} />  3C Cleaning Oy</p>
+        <p><FontAwesomeIcon icon={faMapLocationDot} />  Ylismäentie 12 F 17, 02250 Espoo, Finland</p>
+        <p><FontAwesomeIcon icon={faEnvelope} />  thanhluan081999@gmail.com</p>
+        <p><FontAwesomeIcon icon={faPhone}/>  +358 45 1438656</p>
       </div>
       <div className="divider">
         <span>O<br />R</span>

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import 'animate.css';
 import '../styles/_hero.scss';
-import backgroundImage from '../assets/herobackground.png';
+import { Link } from 'react-router-dom';
+import backgroundImage from '../assets/herobackground.png'; // Update path to your actual background image file
 
 const words = ["trustworthy", "dependable", "reliable", "faithful", "honest", "reputable"];
 
@@ -18,7 +19,7 @@ const Hero: React.FC = () => {
         setCurrentWord(words[wordIndex]);
         setAnimationClass('animate__animated animate__bounceIn');
       }, 500);
-    }, 4000);
+    }, 4000); // Change word every 4 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -30,6 +31,10 @@ const Hero: React.FC = () => {
         <h2>
           Your <span className={`changing-word ${animationClass}`}>{currentWord}</span> cleaning service
         </h2>
+        <div className="hero-buttons">
+          <Link to="/about" className="hero-button">Learn more</Link>
+          <a href="#order-section" className="hero-button primary">Order now</a>
+        </div>
       </div>
     </section>
   );

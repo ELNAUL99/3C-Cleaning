@@ -8,7 +8,7 @@ const AboutUs: React.FC = () => {
   return (
     <section className="about-us">
       <h2>At 3C Cleaning, we clean, you relax.</h2>
-      <p className="subheading">C in 3C stands for cleaning, caring, and cheerful.</p>
+      <p className="subheading">3C stands for cleaning, caring, and cheerful.</p>
       <div className="about-section">
         <div className="about-item">
           <div className="about-content">

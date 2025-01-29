@@ -3,6 +3,7 @@ import Hero from '../sections/Hero';
 import Benefits from '../sections/Benefits';
 import Testimonials from '../sections/Testimonials';
 import Faq from '../sections/FAQ';
+import Order from '../sections/Order';
 import '../styles/_homepage.scss';
 
 const Homepage: React.FC = () => {
@@ -12,6 +13,7 @@ const Homepage: React.FC = () => {
       <Benefits />
       <Testimonials />
       <Faq />
+      <Order />
     </div>
   );
 };

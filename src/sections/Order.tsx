@@ -25,9 +25,9 @@ const Order: React.FC = () => {
         from_email: email,
         from_phonenumber: phonenumber,
         to_name: '3C Cleaning',
-        from_apartment_type: apartmentType,
-        floors: floors || '1',
-        from_apartment_size: size,
+        from_apartmenttype: apartmentType,
+        from_apartmentfloor: floors || '1',
+        from_apartmentsize: size,
       };
   
       emailjs.send(serviceID, templateID, templateParams, publicKey)

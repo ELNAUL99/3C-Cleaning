@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import '../styles/_header.scss';
@@ -9,6 +9,7 @@ import logo from '../assets/logo.png';
 const Header: React.FC = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -18,6 +19,10 @@ const Header: React.FC = () => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
       setDropdownOpen(false);
     }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
@@ -30,13 +35,13 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="left-logo">
-        <Link to="/">
+        <Link to="/" onClick={() => location.pathname === '/' && scrollToTop()}>
           <img src={wordLogo} alt="3C Cleaning Word Logo" />
         </Link>
       </div>
       <nav>
         <ul className="nav-left">
-          <li><Link to="/">Home</Link></li>
+          <li><Link to="/" onClick={() => location.pathname === '/' && scrollToTop()}>Home</Link></li>
           <li><Link to="/services">Services</Link></li>
         </ul>
         <div className="center-logo">

@@ -26,7 +26,7 @@ const AboutUs: React.FC = () => {
               </p>
             </div>
             <div className="about-image">
-              <img src={cleanImage} alt="Clean" />
+              <img src={cleanImage} alt="Clean" loading="lazy"/>
             </div>
           </div>
           <div className="about-item reverse">
@@ -41,7 +41,7 @@ const AboutUs: React.FC = () => {
               </p>
             </div>
             <div className="about-image">
-              <img src={caringImage} alt="Caring" />
+              <img src={caringImage} alt="Caring" loading="lazy"/>
             </div>
           </div>
           <div className="about-item">
@@ -56,7 +56,7 @@ const AboutUs: React.FC = () => {
               </p>
             </div>
             <div className="about-image">
-              <img src={cheerfulImage} alt="Cheerful" />
+              <img src={cheerfulImage} alt="Cheerful" loading="lazy"/>
             </div>
           </div>
         </div>

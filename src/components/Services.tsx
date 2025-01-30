@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/_services.scss';
-import ServiceInclude from '../sections/ServiceInclude'; // Ensure this path is correct
+import ServiceInclude from '../sections/ServiceInclude';
+import interestingFactImage from '../assets/taxcreditFact.jpg';
 
 const Services: React.FC = () => {
   return (
@@ -42,6 +43,24 @@ const Services: React.FC = () => {
           </div>
         </div>
         <ServiceInclude />
+        <div className="interesting-fact-section">
+          <div className="fact-content">
+            <div className="fact-caption">Interesting Fact</div>
+            <p className="fact-highlight">You can claim tax credit equal to 35% of your cleaning expense.</p>
+            <p>As our customer, you can request us to make a yearly tax summary for your cleaning so that you can claim your tax credit for household expenses easily and simply. You'll get 35% of the amount you paid back (threshold 150 euros).</p>
+            <p>The tax credit for household expenses is done to:</p>
+            <ul>
+              <li>Eradicate the black market</li>
+              <li>Make the services affordable for more people</li>
+              <li>Encourage people to buy services from legit service providers</li>
+              <li>Increase employment</li>
+            </ul>
+            <p>You can get the work 35% cheaper, however, in such a way that the cleaners receive adequate compensation for their work.</p>
+          </div>
+          <div className="fact-image">
+            <img src={interestingFactImage} alt="Interesting Fact" />
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -74,6 +93,7 @@ const EstimationCalculator: React.FC = () => {
 
     if (housingType === 'rivitalo' || housingType === 'omatalo' || housingType === 'paritalo') {
       if (floorCount) baseTime *= parseInt(floorCount);
+      setEstimatedTime(baseTime);
     }
 
     if (floorCount === '3+' || houseSize === 'larger than 80m2') {
@@ -82,7 +102,10 @@ const EstimationCalculator: React.FC = () => {
       return;
     }
 
-    setEstimatedTime(baseTime);
+    if (housingType === 'kerrostalo') {
+      baseTime *= 1;
+      setEstimatedTime(baseTime);
+    }
   };
 
   return (

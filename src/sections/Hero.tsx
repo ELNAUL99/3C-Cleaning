@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import 'animate.css';
 import '../styles/_hero.scss';
 import { Link } from 'react-router-dom';
-import backgroundImage from '../assets/herobackground.png';
+import backgroundImage from '../assets/heroBackground1.png';
 import { Link as ScrollLink } from 'react-scroll';
 
 const words = ["trustworthy", "dependable", "reliable", "faithful", "honest", "reputable"];

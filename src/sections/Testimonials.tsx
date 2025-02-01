@@ -7,6 +7,7 @@ const reviews = [
   { text: "Korkealaatuinen, tehokas ja ystävällinen palvelu, erittäin suositeltavaa.", name: "Inga N.", link: "https://www.facebook.com/inga.pichat/posts/pfbid023PDXo6S8uaoNTKhdrUEitrbaiQFEs5vqLPB55Qpoi6ce5xoKTLYttZc45rFZruoyl" },
   { text: "Thank you so much for all those pictures and your detailed report. You did really great job. I do appreciate. Please make an invoice for 4 hours. Let me book you in the middle of December please for another cleaning somewhere around 19th or 20th of December. If you can please send me an invoice I will pay it straight ahead. Have a great afternoon.", name: "Ville J.", link: "https://www.facebook.com/photo/?fbid=122125211396525108&set=pb.61565753254534.-2207520000" },
   { text: "Hi Alice! Thank you for cleaning the apartment so throughly.", name: "Katarina S.", link: "https://www.facebook.com/photo/?fbid=122124745190525108&set=pb.61565753254534.-2207520000" },
+  { text: "I've always liked open hearted Asians. They showed that they care about other people. They worked quickly and yet very carefully. The work is perfect, full ten!", name: "Eira L.", link: "https://www.facebook.com/profile.php?id=61565753254534" },
   { text: "Thank you for your hard work in cleaning the apartment. I truly appreciate it. Wishing you continued success! Thanks once more!", name: "Sarah W.", link: "https://www.facebook.com/photo/?fbid=122122446230525108&set=pb.61565753254534.-2207520000" }
 ];
 

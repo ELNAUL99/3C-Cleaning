@@ -12,8 +12,9 @@ const Services: React.FC = () => {
       <div className="content-layer">
         <div className="estimation-section">
           <div className="package regular">
-            <h3>Home Cleaning</h3>
-            <p>38 €/h (include VAT)</p>
+            <p>Home Cleaning: 38 €/h (Inc. VAT)</p>
+            <p>Office, Airbnb Cleaning: 30 €/h (Ex. VAT)</p>
+            <p>Moving In or Out Cleaning: 44 €/h (Inc. VAT)</p>
           </div>
           <div className="estimation-form">
             <EstimationCalculator />
@@ -27,7 +28,7 @@ const Services: React.FC = () => {
                 <span>43% off</span>
               </div>
               <h3>First Time Package 1</h3>
-              <p className='offer-price'>65 €/3h (include VAT) ***</p>
+              <p className='offer-price'>65 €/3h (Inc. VAT) ***</p>
               <p>Home cleaning or deep cleaning</p>
               <p className="note">** Any extra hour will be charged at normal price</p>
             </div>
@@ -36,7 +37,7 @@ const Services: React.FC = () => {
                 <span>47% off</span>
               </div>
               <h3>First Time Package 2</h3>
-              <p className='offer-price'>100 €/5h (include VAT) ***</p>
+              <p className='offer-price'>100 €/5h (Inc. VAT) ***</p>
               <p>Home cleaning or deep cleaning</p>
               <p className="note">** Any extra hour will be charged at normal price</p>
             </div>

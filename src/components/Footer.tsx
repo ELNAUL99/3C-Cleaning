@@ -3,8 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 import '../styles/_footer.scss';
+import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="footer-icons">
@@ -20,10 +23,10 @@ const Footer: React.FC = () => {
       </div>
       <nav className="footer-nav">
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/services">Services</Link></li>
-          <li><Link to="/aboutus">About Us</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
+          <li><Link to="/">{t('home')}</Link></li>
+          <li><Link to="/services">{t('services')}</Link></li>
+          <li><Link to="/aboutus">{t('aboutUs')}</Link></li>
+          <li><Link to="/contact">{t('contactUs')}</Link></li>
         </ul>
       </nav>
       <div className="footer-bottom">

@@ -6,24 +6,28 @@ import HomePage from './components/HomePage';
 import Services from './components/Services';
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
+import { LanguageProvider } from './contexts/LanguageProvider';
 import './styles/main.scss';
+import './i18n/i18n'; // Ensure i18n is initialized
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <div>
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <LanguageProvider>
+      <Router>
+        <div>
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/aboutus" element={<AboutUs />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </LanguageProvider>
   );
 };
 

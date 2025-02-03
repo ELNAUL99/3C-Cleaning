@@ -1,40 +1,43 @@
 import React from 'react';
 import '../styles/_benefits.scss';
+import { useTranslation } from 'react-i18next';
 
 const Benefits: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="benefits">
-      <h2>Our Benefits</h2>
+      <h2>{t('benefits')}</h2>
       <div className="benefit-list">
         <div className="benefit-item">
           <hr className="benefit-divider" />
           <i className="benefit-icon">👍</i>
-          <h3>High Quality</h3>
-          <p>Experience top-notch cleaning services with exceptional results.</p>
+          <h3>{t('highQuality')}</h3>
+          <p>{t('highQualityDesc')}</p>
         </div>
         <div className="benefit-item">
           <hr className="benefit-divider" />
           <i className="benefit-icon">⌛</i>
-          <h3>Time-Saving</h3>
-          <p>Save valuable time with our efficient and reliable services.</p>
+          <h3>{t('timeSaving')}</h3>
+          <p>{t('timeSavingDesc')}</p>
         </div>
         <div className="benefit-item">
           <hr className="benefit-divider" />
           <i className="benefit-icon">💚</i>
-          <h3>Healthier Environment</h3>
-          <p>Enjoy a cleaner and healthier living or working space.</p>
+          <h3>{t('healthierEnvironment')}</h3>
+          <p>{t('healthierEnvironmentDesc')}</p>
         </div>
         <div className="benefit-item">
           <hr className="benefit-divider" />
-          <i className="benefit-icon">💬</i> {/* Icon for Free Estimates */}
-          <h3>Free Estimates</h3>
-          <p>Free estimates for all cleaning services!</p>
+          <i className="benefit-icon">💬</i>
+          <h3>{t('freeEstimates')}</h3>
+          <p>{t('freeEstimatesDesc')}</p>
         </div>
         <div className="benefit-item">
           <hr className="benefit-divider" />
-          <i className="benefit-icon">📅</i> {/* Icon for Quick Scheduling */}
-          <h3>Quick Scheduling</h3>
-          <p>Book your cleaning service with ease and convenience.</p>
+          <i className="benefit-icon">📅</i>
+          <h3>{t('quickScheduling')}</h3>
+          <p>{t('quickSchedulingDesc')}</p>
         </div>
       </div>
     </section>

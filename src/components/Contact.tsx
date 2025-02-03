@@ -3,8 +3,10 @@ import emailjs from 'emailjs-com';
 import '../styles/_contact.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBuilding, faEnvelope, faMapLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const [formStatus, setFormStatus] = useState('');
 
   const [name, setName] = useState('');
@@ -35,7 +37,7 @@ const Contact: React.FC = () => {
 
     emailjs.send(serviceID, templateID, templateParams, publicKey)
       .then(() => {
-        setFormStatus('Message sent successfully!');
+        setFormStatus(t('formStatusSuccess'));
         setName('');
         setEmail('');
         setPhoneNumber('');
@@ -44,7 +46,7 @@ const Contact: React.FC = () => {
         setSize('');
         setMessage('');
       }, (error) => {
-        setFormStatus('Failed to send message. Please try again later.');
+        setFormStatus(t('formStatusError'));
         console.error('EmailJS error:', error);
       });
   };
@@ -52,18 +54,18 @@ const Contact: React.FC = () => {
   return (
     <section className="contact-us">
       <div className="contact-heading">
-        <h2>Contact Us</h2>
+        <h2>{t('contactUsHeading')}</h2>
       </div>
       <div className="content-layer">
         <div className="contact-form-section">
-          <h2>Get in Touch</h2>
+          <h2>{t('getInTouch')}</h2>
           <form onSubmit={sendEmail}>
             <div className="form-group">
               <input
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Name"
+                placeholder={t('namePlaceholder')}
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -74,7 +76,7 @@ const Contact: React.FC = () => {
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Email"
+                placeholder={t('emailPlaceholder')}
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -85,7 +87,7 @@ const Contact: React.FC = () => {
                 type="tel"
                 id="phone"
                 name="phone"
-                placeholder="Phone"
+                placeholder={t('phonePlaceholder')}
                 required
                 value={phonenumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
@@ -99,7 +101,7 @@ const Contact: React.FC = () => {
                 value={apartmentType}
                 onChange={(e) => setApartmentType(e.target.value)}
               >
-                <option value="">Type of Apartment</option>
+                <option value="">{t('apartmentTypePlaceholder')}</option>
                 <option value="omatalo">Omatalo</option>
                 <option value="paritalo">Paritalo</option>
                 <option value="rivitalo">Rivitalo</option>
@@ -115,7 +117,7 @@ const Contact: React.FC = () => {
                 value={floors}
                 onChange={(e) => setFloors(e.target.value)}
               >
-                <option value="">Number of Floors</option>
+                <option value="">{t('numberOfFloorsPlaceholder')}</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -131,7 +133,7 @@ const Contact: React.FC = () => {
                 value={size}
                 onChange={(e) => setSize(e.target.value)}
               >
-                <option value="">Size (m²)</option>
+                <option value="">{t('sizePlaceholder')}</option>
                 <option value="Under 40">Under 40</option>
                 <option value="41-50">41-50</option>
                 <option value="51-60">51-60</option>
@@ -144,24 +146,24 @@ const Contact: React.FC = () => {
               <textarea
                 id="message"
                 name="message"
-                placeholder="Any specific note you want us to know about?"
+                placeholder={t('messagePlaceholder')}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit">{t('submitButton')}</button>
           </form>
           {formStatus && <p className="form-status">{formStatus}</p>}
         </div>
         <div className="contact-info-section">
-          <h2>Contact Information</h2>
+          <h2>{t('contactInformation')}</h2>
           <p><FontAwesomeIcon icon={faBuilding} />  3C Cleaning Oy</p>
           <p><FontAwesomeIcon icon={faMapLocationDot} />  Ylismäentie 12 F 17, 02250 Espoo, Finland</p>
           <p><FontAwesomeIcon icon={faEnvelope} />  3ccleaningpro@gmail.com</p>
           <p><FontAwesomeIcon icon={faPhone}/>  +358 45 1438656</p>
         </div>
         <div className="divider">
-          <span>O<br />R</span>
+          <span>{t('or')}</span>
         </div>
       </div>
     </section>

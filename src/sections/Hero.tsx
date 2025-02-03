@@ -1,23 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import 'animate.css';
 import '../styles/_hero.scss';
 import { Link } from 'react-router-dom';
 import backgroundImage from '../assets/heroBackground1.png';
 import { Link as ScrollLink } from 'react-scroll';
-
-const words = ["trustworthy", "dependable", "reliable", "faithful", "honest", "reputable"];
+import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../contexts/LanguageProvider';
 
 const Hero: React.FC = () => {
-  const [currentWord, setCurrentWord] = useState(words[0]);
+  const { t } = useTranslation();
+  const { language } = useLanguage();
+  const [currentWord, setCurrentWord] = useState<string>('');
   const [animationClass, setAnimationClass] = useState('animate__animated animate__bounceIn');
-  let wordIndex = 0;
+  const wordsRef = useRef<string[]>([]);
+  let wordIndex = useRef(0);
+
+  useEffect(() => {
+    wordsRef.current = t('heroWords', { returnObjects: true }) as string[];
+    wordIndex.current = 0;
+    setCurrentWord(wordsRef.current[0]);
+  }, [language, t]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setAnimationClass('animate__animated animate__fadeOut');
       setTimeout(() => {
-        wordIndex = (wordIndex + 1) % words.length;
-        setCurrentWord(words[wordIndex]);
+        wordIndex.current = (wordIndex.current + 1) % wordsRef.current.length;
+        setCurrentWord(wordsRef.current[wordIndex.current]);
         setAnimationClass('animate__animated animate__bounceIn');
       }, 500);
     }, 4000); // Change word every 4 seconds
@@ -30,11 +39,11 @@ const Hero: React.FC = () => {
       <div className="hero-content">
         <h1>3C Cleaning</h1>
         <h2>
-          Your <span className={`changing-word ${animationClass}`}>{currentWord}</span> cleaning service
+          {t('your')} <span className={`changing-word ${animationClass}`}>{currentWord}</span> {t('cleaningService')}
         </h2>
         <div className="hero-buttons">
-          <Link to="/aboutus" className="hero-button">Learn more</Link>
-          <ScrollLink to="order-section" smooth={true} duration={1000} className="hero-button primary">Order now</ScrollLink>
+          <Link to="/aboutus" className="hero-button">{t('learnMore')}</Link>
+          <ScrollLink to="order-section" smooth={true} duration={1000} className="hero-button primary">{t('orderNow')}</ScrollLink>
         </div>
       </div>
     </section>

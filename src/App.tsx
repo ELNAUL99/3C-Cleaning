@@ -18,7 +18,7 @@ const App: React.FC = () => {
           <Header />
           <main>
             <Routes>
-              <Route path="/3C-Cleaning" element={<HomePage />} />
+              <Route path="/" element={<HomePage />} />
               <Route path="/services" element={<Services />} />
               <Route path="/aboutus" element={<AboutUs />} />
               <Route path="/contact" element={<Contact />} />

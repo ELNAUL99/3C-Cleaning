@@ -8,7 +8,7 @@ import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import { LanguageProvider } from './contexts/LanguageProvider';
 import './styles/main.scss';
-import './i18n/i18n'; // Ensure i18n is initialized
+import './i18n/i18n'; 
 
 const App: React.FC = () => {
   return (
@@ -23,7 +23,6 @@ const App: React.FC = () => {
               <Route path="/aboutus" element={<AboutUs />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
-            <HomePage/>
           </main>
           <Footer />
         </div>

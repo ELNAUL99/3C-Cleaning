@@ -7,7 +7,7 @@ import Faq from '../sections/FAQ';
 import Order from '../sections/Order';
 import '../styles/_homepage.scss';
 
-const Homepage: React.FC = () => {
+const HomePage: React.FC = () => {
   return (
     <div className="homepage">
       <Hero />
@@ -20,4 +20,4 @@ const Homepage: React.FC = () => {
   );
 };
 
-export default Homepage;
+export default HomePage;

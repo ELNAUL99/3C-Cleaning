@@ -18,9 +18,9 @@ const Order: React.FC = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const serviceID = 'service_qjqmhe7';
-    const templateID = 'template_uvpmjt8';
-    const publicKey = '1ppMNDmfpQd-fuBGj';
+    const serviceID = 'service_upoxqkx';
+    const templateID = 'template_olasjef';
+    const publicKey = '26iXmGYSsDxD40Twl';
 
     const templateParams = {
       from_name: name,

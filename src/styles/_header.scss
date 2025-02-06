@@ -1,5 +1,5 @@
 .header {
-  background-color: #354d40; 
+  background-color: #354d40;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -11,7 +11,7 @@
   z-index: 1000;
 
   .left-logo img {
-    height: 70px; 
+    height: 70px;
     margin-right: 1rem;
   }
 
@@ -23,12 +23,12 @@
     position: relative;
     left: -2.75%;
 
-    .nav-left{
+    .nav-left {
       position: relative;
       left: -15%;
     }
 
-    .nav-right{
+    .nav-right {
       position: relative;
       left: 6%;
     }
@@ -36,7 +36,7 @@
     .nav-left, .nav-right {
       list-style: none;
       display: flex;
-      gap: 6rem; 
+      gap: 6rem;
       align-items: center;
 
       li {
@@ -87,8 +87,10 @@
   }
 
   .language-switcher {
-    position: relative;
-    left: -2rem;
+    position: absolute;
+    right: 1rem; // Position the language switcher at the far right
+    top: 50%;
+    transform: translateY(-50%);
 
     .dropdown-toggle {
       background-color: transparent;
@@ -99,7 +101,7 @@
       padding: 0.5rem 1rem;
 
       &:hover {
-        color: #aad2ba; 
+        color: #aad2ba;
       }
 
       &:focus {
@@ -110,8 +112,8 @@
     .dropdown-menu {
       display: block;
       position: absolute;
-      top: 50%;
-      right: 80%;
+      top: 100%;
+      right: 0;
       background-color: #fff;
       border: 1px solid #ddd;
       border-radius: 4px;
@@ -147,7 +149,7 @@
       color: white;
 
       &:hover {
-        color: #aad2ba; 
+        color: #aad2ba;
       }
 
       &:focus {
@@ -181,15 +183,22 @@
         gap: 1rem;
       }
 
-      .nav-left{
+      .nav-left {
         position: relative;
         left: -5%;
         margin-bottom: 0;
       }
 
-      .nav-right{
+      .nav-right {
         position: relative;
         left: -5%;
+        margin-bottom: 0;
+      }
+
+      .language-switcher {
+        position: relative;
+        left: -3%;
+        transform: none;
       }
     }
 
@@ -207,9 +216,11 @@
       display: none;
     }
 
-    .hamburger-menu.open ~ nav,
-    .hamburger-menu.open ~ .language-switcher {
-      display: block;
+    nav.open .language-switcher {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0;
     }
   }
 }

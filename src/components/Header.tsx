@@ -60,8 +60,7 @@ const Header: React.FC = () => {
           <li><Link to="/aboutus">{t('aboutUs')}</Link></li>
           <li><Link to="/contact">{t('contactUs')}</Link></li>
         </ul>
-      </nav>
-      <div className="language-switcher" ref={dropdownRef}>
+        <div className={`language-switcher ${menuOpen ? 'open' : ''}`} ref={dropdownRef}>
         <button className="dropdown-toggle" onClick={toggleDropdown}>
           <FontAwesomeIcon icon={faGlobe} />
         </button>
@@ -72,6 +71,7 @@ const Header: React.FC = () => {
           </ul>
         )}
       </div>
+      </nav>
       <div className="hamburger-menu">
         <button className="menu-toggle" onClick={toggleMenu}>
           <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />

@@ -36,6 +36,7 @@
       height: calc(100% + 4rem);
 
       .package {
+        position: relative;
         flex: 1.5;
         padding: 4rem;
         display: flex;
@@ -48,18 +49,43 @@
         background-repeat: no-repeat;
         background-image: url('../assets/priceBackground.png');
 
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5); 
+          border-radius: inherit; 
+          z-index: 1; 
+        }
+
         p {
+          position: relative;
+          z-index: 2;
           font-size: 1.5rem;
           font-weight: 800;
-          color: #000;
-          text-shadow: 2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;
+          color: #fff;
         }
 
         .package-item {
+          position: relative;
+          z-index: 2;
           display: flex;
           flex-direction: column;
           justify-content: center;
           text-align: left;
+        }
+
+        .package-note {
+          position: relative;
+          top: 3rem;
+
+          p{
+            font-size: 0.875rem; 
+            color: #ececec; 
+          }
         }
       }
 
@@ -243,6 +269,11 @@
   }
 
   @media (max-width: 1024px) {
+
+    .package-note{
+      margin-bottom: 2rem;
+    }
+
     .content-layer {
       .estimation-section {
         flex-direction: column;

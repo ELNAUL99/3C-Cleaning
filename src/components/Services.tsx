@@ -15,9 +15,13 @@ const Services: React.FC = () => {
       <div className="content-layer">
         <div className="estimation-section">
           <div className="package regular">
-            <p>{t('homeCleaning')}</p>
+            <p>{t('homeCleaning')}*</p>
+            <p>{t('movingCleaning')}**</p>
             <p>{t('officeAirbnbCleaning')}</p>
-            <p>{t('movingCleaning')}</p>
+            <div className="package-note">
+              <p>{t('packageNote1')}</p>
+              <p>{t('packageNote2')}</p>
+            </div>
           </div>
           <div className="estimation-form">
             <EstimationCalculator />

@@ -107,5 +107,7 @@
   "sizePlaceholder": "Size (m²)",
   "messagePlaceholder": "Any specific note you want us to know about?",
   "submitButton": "Submit",
-  "contactInformation": "Contact Information"
+  "contactInformation": "Contact Information",
+  "packageNote1": "* 24,7 €/h after tax deduction",
+  "packageNote2": "** 28,6 €/h after tax deduction"
 }

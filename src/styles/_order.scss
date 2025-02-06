@@ -150,6 +150,7 @@
 
   @media (max-width: 768px) {
     .book-form {
+      border-radius: 5% !important;
       .form-group {
         input, select {
           padding: 10px;
@@ -167,7 +168,7 @@
 
   @media (max-width: 480px) {
     .book-container{
-      
+      max-width: 90%;
       .book-form {
         font-size: 1rem;
         border-radius: 0%;
@@ -176,13 +177,13 @@
           input {
             padding: 8px;
             font-size: 0.8rem;
-            max-width: 190px;
+            max-width: 220px;
           }
 
           select {
             padding: 8px;
             font-size: 0.8rem;
-            max-width: 220px;
+            max-width: 250px;
           }
         }
 

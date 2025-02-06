@@ -79,20 +79,9 @@
   }
 
   @media (max-width: 1024px) {
-    .about-heading h2 {
-      font-size: 2rem;
-    }
 
     .content-layer {
       padding: 1rem;
-
-      .quote {
-        font-size: 1.75rem;
-      }
-
-      .subheading {
-        font-size: 1.25rem;
-      }
 
       .about-section {
         display: flex;
@@ -130,20 +119,9 @@
   }
 
   @media (max-width: 768px) {
-    .about-heading h2 {
-      font-size: 1.75rem;
-    }
 
     .content-layer {
       padding: 1rem;
-
-      .quote {
-        font-size: 1.5rem;
-      }
-
-      .subheading {
-        font-size: 1rem;
-      }
 
       .about-section {
         .about-item {
@@ -156,20 +134,9 @@
   }
 
   @media (max-width: 480px) {
-    .about-heading h2 {
-      font-size: 1.5rem;
-    }
 
     .content-layer {
       padding: 0.5rem;
-
-      .quote {
-        font-size: 1.25rem;
-      }
-
-      .subheading {
-        font-size: 0.875rem;
-      }
 
       .about-section {
         .about-item {

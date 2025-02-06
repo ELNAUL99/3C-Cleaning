@@ -278,22 +278,36 @@
         margin: 0 auto;
         text-align: center;
 
-        .fact-caption{
+        .fact-caption {
           font-size: 2rem !important;
           font-weight: 600 !important;
         }
 
-        .fact-highlight{
+        .fact-highlight {
           font-size: 1rem !important;
         }
 
-        p, ul, li{
+        p, ul, li {
           font-size: 0.9rem !important;
         }
       }
 
       .fact-image {
         display: none !important; 
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .estimation-section{
+      margin: 0 3rem !important;
+    }
+
+    .offer-section {
+      .packages {
+        .package.first-time {
+          width: 75%; 
+        }
       }
     }
   }

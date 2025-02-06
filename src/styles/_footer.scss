@@ -1,5 +1,5 @@
 .footer {
-  background-color: #354d40; // Original background color for the upper footer
+  background-color: #354d40; 
   color: white;
   padding: 3rem 0 0 0;
   text-align: center;
@@ -7,14 +7,14 @@
   .footer-icons {
     display: flex;
     justify-content: center;
-    gap: 3rem; // Space between icons
+    gap: 3rem;
 
     a {
       color: white;
       text-decoration: none;
 
       &:hover {
-        color: #25D366; // WhatsApp green color for hover
+        color: #25D366; 
       }
     }
   }
@@ -48,7 +48,7 @@
   }
 
   .footer-bottom {
-    background-color: #1b241c; // Double darker background color for the footer bottom
+    background-color: #1b241c;
     padding: 1rem;
     font-size: 1rem;
     margin-top: 2rem;
@@ -58,6 +58,12 @@
     p {
       margin: 0;
       text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-nav {
+      display: none;
     }
   }
 }

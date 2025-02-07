@@ -13,6 +13,7 @@ const Header: React.FC = () => {
   const { changeLanguage } = useLanguage();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
@@ -22,6 +23,10 @@ const Header: React.FC = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const toggleServices = () => {
+    setServicesOpen(!servicesOpen);
   };
 
   const handleClickOutside = (event: MouseEvent) => {
@@ -51,7 +56,16 @@ const Header: React.FC = () => {
       <nav className={menuOpen ? 'open' : ''}>
         <ul className="nav-left">
           <li><Link to="/" onClick={() => location.pathname === '/' && scrollToTop()}>{t('home')}</Link></li>
-          <li><Link to="/services">{t('services')}</Link></li>
+          <li className="dropdown" onClick={toggleServices}>
+            <span>{t('services')}</span>
+            {servicesOpen && (
+              <ul className="dropdown-menu">
+                <li><Link to="/home-cleaning-services">{t('homeCleaningServices')}</Link></li>
+                <li><Link to="/moving-cleaning-services">{t('movingCleaningServices')}</Link></li>
+                <li><Link to="/office-cleaning-services">{t('officeCleaningServices')}</Link></li>
+              </ul>
+            )}
+          </li>
         </ul>
         <div className="center-logo">
           <img src={logo} alt="3C Cleaning Image Logo" />

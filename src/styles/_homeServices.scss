@@ -1,4 +1,4 @@
-.services {
+.homeServices {
   padding: 0;
   text-align: center;
   position: relative;
@@ -47,7 +47,7 @@
         border-radius: 0.5rem 0 0 0.5rem;
         background-size: cover;
         background-repeat: no-repeat;
-        background-image: url('../assets/priceBackground.png');
+        background-image: url('../assets/homeCleaningBackground.png');
 
         &::before {
           content: '';

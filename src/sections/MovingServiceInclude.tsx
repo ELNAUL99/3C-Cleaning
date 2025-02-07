@@ -4,7 +4,7 @@ import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import '../styles/_serviceInclude.scss';
 import { useTranslation } from 'react-i18next';
 
-const ServiceInclude: React.FC = () => {
+const MovingServiceInclude: React.FC = () => {
   const [openIndices, setOpenIndices] = useState<number[]>([]);
   const { t } = useTranslation();
 
@@ -18,24 +18,20 @@ const ServiceInclude: React.FC = () => {
 
   const services = [
     { 
-      question: t('homeService1Question'), 
-      answer: t('homeService1Answer'),
+      question: t('movingService1Question'), 
+      answer: t('movingService1Answer'),
     },
     { 
-      question: t('homeService2Question'), 
-      answer: t('homeService2Answer'),
+      question: t('movingService2Question'), 
+      answer: t('movingService2Answer'),
     },
     { 
-      question: t('homeService3Question'), 
-      answer: t('homeService3Answer'),
+      question: t('movingService3Question'), 
+      answer: t('movingService3Answer'),
     },
     { 
-      question: t('homeService4Question'), 
-      answer: t('homeService4Answer'),
-    },
-    { 
-      question: t('homeService5Question'), 
-      answer: t('homeService5Answer'),
+      question: t('movingService4Question'), 
+      answer: t('movingService4Answer'),
     },
   ];
 
@@ -61,4 +57,4 @@ const ServiceInclude: React.FC = () => {
   );
 };
 
-export default ServiceInclude;
+export default MovingServiceInclude;

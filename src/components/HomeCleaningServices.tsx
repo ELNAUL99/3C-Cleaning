@@ -1,26 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/_services.scss';
+import '../styles/_homeServices.scss';
 import ServiceInclude from '../sections/ServiceInclude';
 import interestingFactImage from '../assets/taxcreditFact.jpg';
 import { useTranslation } from 'react-i18next';
 
-const Services: React.FC = () => {
+const HomeCleaningServices: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="services">
+    <section className="homeServices">
       <div className="services-heading">
-        <h2>{t('servicesHeading')}</h2>
+        <h2>{t('homeCleaningServices')}</h2>
       </div>
       <div className="content-layer">
         <div className="estimation-section">
           <div className="package regular">
-            <p>{t('homeCleaning')}*</p>
-            <p>{t('movingCleaning')}**</p>
-            <p>{t('officeAirbnbCleaning')}</p>
+            <p>{t('homeCleaning')}</p>
             <div className="package-note">
               <p>{t('packageNote1')}</p>
-              <p>{t('packageNote2')}</p>
             </div>
           </div>
           <div className="estimation-form">
@@ -152,10 +149,10 @@ const EstimationCalculator: React.FC = () => {
       <button onClick={calculateTime} disabled={isButtonDisabled}>{t('calculate')}</button>
         <div className="estimated-time">
           {estimatedTime !== null && (<p>{t('estimatedCleaningTime')}: {estimatedTime} {t('hours')} *</p>)}
-          <p className="note">{t('note')}</p>
+          <p className="note">{t('homeNote')}</p>
         </div>
     </div>
   );
 };
 
-export default Services;
+export default HomeCleaningServices;

@@ -33,6 +33,10 @@ const MovingServiceInclude: React.FC = () => {
       question: t('movingService4Question'), 
       answer: t('movingService4Answer'),
     },
+    { 
+      question: t('movingService5Question'), 
+      answer: t('movingService5Answer'),
+    },
   ];
 
   return (

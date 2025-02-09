@@ -22,6 +22,7 @@ const OfficeCleaningServices: React.FC = () => {
     const templateID = 'template_olasjef';
     const publicKey = '26iXmGYSsDxD40Twl';
 
+    const templateParams = {
       from_name: name,
       from_email: email,
       from_phonenumber: phonenumber,

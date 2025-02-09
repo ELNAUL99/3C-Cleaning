@@ -18,24 +18,32 @@ const OfficeServiceInclude: React.FC = () => {
 
   const services = [
     { 
-      question: t('movingService1Question'), 
-      answer: t('movingService1Answer'),
+      question: t('officeService1Question'), 
+      answer: t('officeService1Answer'),
     },
     { 
-      question: t('movingService2Question'), 
-      answer: t('movingService2Answer'),
+      question: t('officeService2Question'), 
+      answer: t('officeService2Answer'),
     },
     { 
-      question: t('movingService3Question'), 
-      answer: t('movingService3Answer'),
+      question: t('officeService3Question'), 
+      answer: t('officeService3Answer'),
     },
     { 
-      question: t('movingService4Question'), 
-      answer: t('movingService4Answer'),
+      question: t('officeService4Question'), 
+      answer: t('officeService4Answer'),
     },
     { 
-      question: t('movingService5Question'), 
-      answer: t('movingService5Answer'),
+      question: t('officeService5Question'), 
+      answer: t('officeService5Answer'),
+    },
+    { 
+      question: t('officeService6Question'), 
+      answer: t('officeService6Answer'),
+    },
+    { 
+      question: t('officeService7Question'), 
+      answer: t('officeService7Answer'),
     },
   ];
 

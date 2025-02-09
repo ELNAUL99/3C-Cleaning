@@ -11,25 +11,27 @@ const OfficeCleaningServices: React.FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phonenumber, setPhoneNumber] = useState('');
-  const [apartmentType, setApartmentType] = useState('');
-  const [floors, setFloors] = useState('');
+  const [address, setAddress] = useState('');
+  const [postcode, setPostcode] = useState('');
   const [size, setSize] = useState('');
+  const [message, setMessage] = useState('');
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const serviceID = 'service_upoxqkx';
-    const templateID = 'template_olasjef';
+    const templateID = 'template_2pdl689';
     const publicKey = '26iXmGYSsDxD40Twl';
 
     const templateParams = {
-      from_name: name,
+      from_companyname: name,
       from_email: email,
       from_phonenumber: phonenumber,
       to_name: '3C Cleaning',
-      from_apartmenttype: apartmentType,
-      from_apartmentfloor: floors || '1',
-      from_apartmentsize: size,
+      from_address: address,
+      from_postcode: postcode,
+      from_size: size,
+      from_message: message,
     };
 
     emailjs.send(serviceID, templateID, templateParams, publicKey)
@@ -38,9 +40,10 @@ const OfficeCleaningServices: React.FC = () => {
         setName('');
         setEmail('');
         setPhoneNumber('');
-        setApartmentType('');
-        setFloors('');
+        setAddress('');
+        setPostcode('');
         setSize('');
+        setMessage('');
       }, (error) => {
         setFormStatus(t('formStatusError'));
         console.error('EmailJS error:', error);
@@ -50,7 +53,7 @@ const OfficeCleaningServices: React.FC = () => {
   return (
     <section className="movingServices">
       <div className="services-heading">
-        <h2>{t('movingCleaningServices')}</h2>
+        <h2>{t('officeCleaningServicesHeading')}</h2>
       </div>
       <div className="content-layer">
         <div className="estimation-section">

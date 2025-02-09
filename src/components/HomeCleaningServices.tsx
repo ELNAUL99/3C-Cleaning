@@ -33,7 +33,7 @@ const HomeCleaningServices: React.FC = () => {
               </div>
               <h3>{t('firstTimePackage1')}</h3>
               <p className='offer-price'>{t('firstTimePackage1Price')}</p>
-              <p>{t('homeOrDeepCleaning')}</p>
+              <p>{t('firstTimeHomeCleaning')}</p>
               <p className="note">{t('firstTimePackageNote')}</p>
             </div>
             <div className="package first-time">
@@ -42,7 +42,7 @@ const HomeCleaningServices: React.FC = () => {
               </div>
               <h3>{t('firstTimePackage2')}</h3>
               <p className='offer-price'>{t('firstTimePackage2Price')}</p>
-              <p>{t('homeOrDeepCleaning')}</p>
+              <p>{t('firstTimeHomeCleaning')}</p>
               <p className="note">{t('firstTimePackageNote')}</p>
             </div>
           </div>

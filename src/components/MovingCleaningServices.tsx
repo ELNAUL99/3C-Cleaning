@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../styles/_movingServices.scss';
 import MovingServiceInclude from '../sections/MovingServiceInclude';
 import { useTranslation } from 'react-i18next';
+import movingImage from '../assets/movingSlogan.jpg';
 
 const MovingCleaningServices: React.FC = () => {
   const { t } = useTranslation();
@@ -23,6 +24,15 @@ const MovingCleaningServices: React.FC = () => {
             <EstimationCalculator />
           </div>
         </div>
+        <div className="slogan-container">
+          <div className="text">
+            <h3 className="slogan">{t('movingSlogan')}</h3>
+            <p className="paragraph">{t('movingParagraph')}</p>
+          </div>
+          <div className="image">
+            <img src={movingImage} alt="Slogan" />
+          </div>
+        </div>
         <MovingServiceInclude />
       </div>
     </section>
@@ -33,7 +43,6 @@ const EstimationCalculator: React.FC = () => {
   const { t } = useTranslation();
   const [houseSize, setHouseSize] = useState('');
   const [estimatedTime, setEstimatedTime] = useState<string | null>(null);
-
 
   const calculateTime = () => {
     let baseTime = "";
@@ -63,10 +72,10 @@ const EstimationCalculator: React.FC = () => {
         </select>
       </div>
       <button onClick={calculateTime}>{t('calculate')}</button>
-        <div className="estimated-time">
-          {estimatedTime !== null && (<p>{t('estimatedCleaningTime')}: {estimatedTime} {t('hours')} *</p>)}
-          <p className="note">{t('movingNote')}</p>
-        </div>
+      <div className="estimated-time">
+        {estimatedTime !== null && (<p>{t('estimatedCleaningTime')}: {estimatedTime} {t('hours')} *</p>)}
+        <p className="note">{t('movingNote')}</p>
+      </div>
     </div>
   );
 };

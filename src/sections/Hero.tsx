@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
         setCurrentWord(wordsRef.current[wordIndex.current]);
         setAnimationClass('animate__animated animate__bounceIn');
       }, 500);
-    }, 4000); // Change word every 4 seconds
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);

@@ -34,6 +34,8 @@
       margin: 0 auto;
       background-color: #fff;
       height: calc(100% + 4rem);
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
       .package {
         position: relative;
@@ -44,7 +46,7 @@
         justify-content: center;
         border: 1px solid #ddd;
         padding: 1rem;
-        border-radius: 0.5rem 0 0 0.5rem;
+        border-radius: 1rem 0 0 1rem;
         background-size: cover;
         background-repeat: no-repeat;
         background-image: url('../assets/homeCleaningBackground.png');
@@ -98,6 +100,7 @@
 
             &:hover {
               background-color: #aad2ba;
+              color: #112A46;
             }
           }
         }
@@ -189,6 +192,7 @@
 
           &:hover {
             background-color: #aad2ba;
+            color: #112A46;
           }
         }
 
@@ -229,6 +233,7 @@
           position: relative;
           width: 350px; 
           background-color: #f0f8ff;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
           .offer-notification {
             position: absolute;
@@ -341,6 +346,13 @@
     .order-form-section {
       text-align: center;
       padding: 2rem 0;
+
+      h2 {
+        margin-bottom: 1rem;
+        font-size: 3rem;
+        font-weight: 900;
+        text-align: center;
+      }
     
       .order-form {
         max-width: 20%;
@@ -349,13 +361,6 @@
         background-color: #fff;
         border-radius: 0.5rem;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
-        h2 {
-          margin-bottom: 1rem;
-          font-size: 2rem;
-          text-align: center;
-          color: #354d40;
-        }
     
         .form-group {
           margin-bottom: 1.5rem;
@@ -393,6 +398,7 @@
     
           &:hover {
             background-color: #aad2ba;
+            color: #112A46;
           }
         }
     

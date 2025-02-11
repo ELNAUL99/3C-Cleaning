@@ -149,5 +149,12 @@
   "movingCleaningPrice": "Moving cleaning price",
   "movingCleaningCost": "What moving cleaning costs?",
   "movingCleaningHourlyRate": "44 €/h",
-  "movingCleaningAfterTax": "28,6€ €/h after-tax deduction."
+  "movingCleaningAfterTax": "28,6€ €/h after-tax deduction.",
+  "officeSizePlaceholder": "Office Size (m²)", 
+  "officeSloganTitle": "Professional, reliable, insured",
+  "officeSloganContent": "These are what our clients expect from an office cleaning service, and 3C Cleaning delivers on every front. We measure our success by your satisfaction, which is why we offer a satisfaction guarantee. Additionally, your dedicated B2B account manager is always available to assist you.",
+  "companyName": "Company Name",
+  "officeCleaningPrice": "Office cleaning price",
+  "officeCleaningCost": "What office cleaning costs?",
+  "officeCleaningHourlyRate": "Starting from 29 €/h + VAT"
 }

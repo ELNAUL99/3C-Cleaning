@@ -153,5 +153,12 @@
   "movingCleaningPrice": "Muuttosiivoushinta",
   "movingCleaningCost": "Mitä muuttosiivous maksaa?",
   "movingCleaningHourlyRate": "44 €/h",
-  "movingCleaningAfterTax": "28,6€ €/h verovähennyksen jälkeen."
+  "movingCleaningAfterTax": "28,6€ €/h verovähennyksen jälkeen.",
+  "officeSizePlaceholder": "Toimiston koko (m²)", 
+  "officeSloganTitle": "Professional, reliable, insured",
+  "officeSloganContent": "Näitä asiakkaamme odottavat toimistosiivouspalvelulta, ja 3C Cleaning toimii joka puolella. Me mittaamme menestystämme tyytyväisyytesi perusteella, minkä vuoksi tarjoamme tyytyväisyystakuun. Lisäksi B2B-asiakaspäällikkösi on aina käytettävissäsi auttamaan sinua.",
+  "companyName": "Yrityksen nimi",
+  "officeCleaningPrice": "Toimistosiivouksen hinta",
+  "officeCleaningCost": "Mitä toimistosiivous maksaa?",
+  "officeCleaningHourlyRate": "Alkaen 29 €/h + alv"
 }

@@ -92,7 +92,6 @@
   "firstTimePackage2": "Package 2",
   "firstTimePackage2Price": "100 €/5h (Inc. VAT) **",
   "firstTimePackageNote": "** Any extra hour will be charged at normal price",
-  "firstTimeHomeCleaning": "Home cleaning",
   "interestingFact": "Interesting Fact",
   "taxCreditHighlight": "You can claim tax credit equal to 35% of your cleaning expense.",
   "taxCreditDetails": "As our customer, you can request us to make a yearly tax summary for your cleaning so that you can claim your tax credit for household expenses easily and simply. You'll get 35% of the amount you paid back (threshold 150 euros).",
@@ -139,5 +138,16 @@
   "officeCleaningServices": "Office Cleaning",
   "officeCleaningServicesHeading": "Commercial/Office Cleaning",
   "movingSlogan": "Let 3C Cleaning Take the Stress Out of Your Move!",
-  "movingParagraph": "Moving can be a hassle, but it doesn't have to be. Let 3C Cleaning's trained professional cleaners handle the tedious scrubbing and mopping, so you can focus on everything else. Ensure you have electricity and water on move-out day, as well as all the necessary cleaning equipment and supplies, including detergents, mops, vacuum cleaners, microfiber towels, sponges, brushes, etc. Book your moving cleaning online and experience a seamless transition with 3C Cleaning!"
+  "movingParagraph": "Moving can be a hassle, but it doesn't have to be. Let 3C Cleaning's trained professional cleaners handle the tedious scrubbing and mopping, so you can focus on everything else. Ensure you have electricity and water on move-out day, as well as all the necessary cleaning equipment and supplies, including detergents, mops, vacuum cleaners, microfiber towels, sponges, brushes, etc. Book your moving cleaning online and experience a seamless transition with 3C Cleaning!",
+  "date": "Preferred Date",
+  "address": "Address",
+  "postcode": "Postcode",
+  "homeCleaningPrice": "Home cleaning price",
+  "homeCleaningCost": "What home cleaning costs?",
+  "homeCleaningHourlyRate": "38 €/h",
+  "homeCleaningAfterTax": "24,7€ €/h after-tax deduction.",
+  "movingCleaningPrice": "Moving cleaning price",
+  "movingCleaningCost": "What moving cleaning costs?",
+  "movingCleaningHourlyRate": "44 €/h",
+  "movingCleaningAfterTax": "28,6€ €/h after-tax deduction."
 }

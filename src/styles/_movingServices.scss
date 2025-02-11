@@ -61,6 +61,59 @@
           z-index: 1; 
         }
 
+        .package-content {
+          z-index: 2;
+          padding: 2rem;
+          text-align: left;
+          color: #fff;
+
+          .cleaning-price {
+            font-size: 1.5rem;
+            font-weight: 600;
+            position: absolute;
+            top: 2rem;
+          }
+
+          .cleaning-cost {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+          }
+
+          .hourly-rate {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin: 1rem 0;
+          }
+
+          .rate-after-tax {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+          }
+
+          .divider {
+            margin: 2rem 0;
+            border: none;
+            border-top: 1px solid #fff;
+          }
+
+          .scroll-button {
+            display: inline-block;
+            padding: 0.5rem 2rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #354d40;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+              background-color: #aad2ba;
+            }
+          }
+        }
+
         p {
           position: relative;
           z-index: 2;
@@ -82,7 +135,7 @@
           position: relative;
           top: 3rem;
 
-          p{
+          p {
             font-size: 0.875rem; 
             color: #ececec; 
           }
@@ -96,8 +149,15 @@
         border-radius: 0 1rem 1rem 0;
         padding: 4rem;
 
+        h3{
+          font-size: 2.5rem;
+          font-weight: 900;
+        }
+
         .form-group {
           margin-bottom: 1rem;
+          font-size: 1.5rem;
+          font-weight: 600;
 
           select {
             width: 100%;
@@ -137,32 +197,30 @@
 
     .slogan-container {
       display: flex;
-      background-color: #f5f5f5;
       padding: 2rem;
       border-radius: 0.5rem;
       text-align: left;
-      justify-content: space-between;
-      align-items: center;
-      margin: 2rem auto;
-      width: 80%;
+      margin-top: 2rem;
+      border-radius: 0.5rem;
 
       .text {
         flex: 1;
-      }
+        padding-right: 1rem;
 
-      .slogan {
-        font-size: 3rem;
-        font-weight: 900;
-        margin-bottom: 1rem;
-      }
+        .slogan {
+          font-size: 3rem;
+          font-weight: 900;
+          margin-bottom: 1rem;
+        }
 
-      .paragraph {
-        width: 80%;
-        font-size: 1.25rem;
+        .paragraph {
+          font-size: 1.25rem;
+        }
       }
 
       .image {
         flex: 1;
+        padding-left: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -171,6 +229,72 @@
           max-width: 100%;
           height: auto;
           border-radius: 0.5rem;
+        }
+      }
+    }
+
+    .order-form-section {
+      text-align: center;
+      padding: 2rem 0;
+    
+      .order-form {
+        max-width: 20%;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+        h2 {
+          margin-bottom: 1rem;
+          font-size: 2rem;
+          text-align: center;
+          color: #354d40;
+        }
+    
+        .form-group {
+          margin-bottom: 1.5rem;
+    
+          input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 0.25rem;
+            font-size: 1rem;
+            box-sizing: border-box;
+          }
+    
+          &.half-width {
+            display: flex;
+            gap: 1rem;
+    
+            input {
+              flex: 1;
+            }
+          }
+        }
+    
+        button {
+          display: block;
+          width: 100%;
+          padding: 0.75rem;
+          background-color: #354d40;
+          color: #fff;
+          border: none;
+          border-radius: 0.25rem;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+    
+          &:hover {
+            background-color: #aad2ba;
+          }
+        }
+    
+        .form-status {
+          margin-top: 1rem;
+          color: #354d40;
+          font-size: 1rem;
         }
       }
     }
@@ -198,20 +322,101 @@
       .slogan-container {
         flex-direction: column;
 
-        .paragraph {
+        .text {
           width: 80%;
+          margin: 0 auto;
+          text-align: center;
+
+          .paragraph {
+            width: 100%;
+          }
         }
 
         .image {
-          margin-top: 2rem;
+          display: none !important;
         }
       }
     }
+
+    .order-form-section {
+      .order-form {
+        max-width: 40% !important;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .order-form-section {
+      .order-form {
+        max-width: 60% !important;
+      }
+    }
+
   }
 
   @media (max-width: 480px) {
     .estimation-section {
       margin: 0 3rem !important;
+
+      .package{
+        .package-content{
+          padding: 1rem !important;
+          
+          .cleaning-price {
+            font-size: 0.9rem !important;
+            font-weight: 300 !important;
+          }
+
+          .cleaning-cost {
+            font-size: 2rem !important;
+            font-weight: 600 !important;
+          }
+
+          .hourly-rate {
+            font-size: 2rem !important;
+            font-weight: 600 !important;
+          }
+
+          .rate-after-tax {
+            font-size: 0.9rem !important;
+            font-weight: 300 !important;
+          }
+
+          .divider {
+            margin: 1rem 0 !important;
+          }
+        }
+      }
+
+      .estimation-form{
+        h3{
+          font-size: 2rem !important;
+          font-weight: 600 !important;
+        }
+      }
+    }
+
+    .slogan-container {
+      .text {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+
+        .slogan {
+          font-size: 1.5rem !important;
+          font-weight: 600 !important;
+        }
+
+        .paragraph {
+          font-size: 0.9rem !important;
+        }
+      }
+    }
+
+    .order-form-section {
+      .order-form {
+        max-width: 70% !important;
+      }
     }
   }
 }

@@ -14,7 +14,7 @@ const LanguageContext = createContext<LanguageContextProps | undefined>(undefine
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const { i18n } = useTranslation();
-  const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
+  const [language, setLanguage] = useState(localStorage.getItem('language') || 'fi');
 
   useEffect(() => {
     i18n.changeLanguage(language);

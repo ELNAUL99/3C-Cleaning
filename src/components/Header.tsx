@@ -15,6 +15,7 @@ const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   const toggleDropdown = () => {
@@ -33,6 +34,13 @@ const Header: React.FC = () => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
       setDropdownOpen(false);
     }
+    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      setMenuOpen(false);
+    }
+  };
+
+  const handleLinkClick = () => {
+    setMenuOpen(false);
   };
 
   const scrollToTop = () => {
@@ -46,6 +54,19 @@ const Header: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1200) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <header className="header">
       <div className="left-logo">
@@ -53,16 +74,16 @@ const Header: React.FC = () => {
           <img src={wordLogo} alt="3C Cleaning Word Logo" />
         </Link>
       </div>
-      <nav className={menuOpen ? 'open' : ''}>
+      <nav className={menuOpen ? 'open' : ''} ref={menuRef}>
         <ul className="nav-left">
-          <li><Link to="/" onClick={() => location.pathname === '/' && scrollToTop()}>{t('home')}</Link></li>
+          <li><Link to="/" onClick={() => {location.pathname === '/' && scrollToTop(); handleLinkClick()}}>{t('home')}</Link></li>
           <li className="dropdown" onClick={toggleServices}>
             <span>{t('services')}</span>
             {servicesOpen && (
               <ul className="dropdown-menu">
-                <li><Link to="/home-cleaning-services">{t('homeCleaningServices')}</Link></li>
-                <li><Link to="/moving-cleaning-services">{t('movingCleaningServices')}</Link></li>
-                <li><Link to="/office-cleaning-services">{t('officeCleaningServices')}</Link></li>
+                <li><Link to="/home-cleaning-services" onClick={handleLinkClick}>{t('homeCleaningServices')}</Link></li>
+                <li><Link to="/moving-cleaning-services" onClick={handleLinkClick}>{t('movingCleaningServices')}</Link></li>
+                <li><Link to="/office-cleaning-services" onClick={handleLinkClick}>{t('officeCleaningServices')}</Link></li>
               </ul>
             )}
           </li>
@@ -71,8 +92,8 @@ const Header: React.FC = () => {
           <img src={logo} alt="3C Cleaning Image Logo" />
         </div>
         <ul className="nav-right">
-          <li><Link to="/aboutus">{t('aboutUs')}</Link></li>
-          <li><Link to="/contact">{t('contactUs')}</Link></li>
+          <li><Link to="/aboutus" onClick={handleLinkClick}>{t('aboutUs')}</Link></li>
+          <li><Link to="/contact" onClick={handleLinkClick}>{t('contactUs')}</Link></li>
         </ul>
         <div className={`language-switcher ${menuOpen ? 'open' : ''}`} ref={dropdownRef}>
         <button className="dropdown-toggle" onClick={toggleDropdown}>
@@ -80,8 +101,8 @@ const Header: React.FC = () => {
         </button>
         {dropdownOpen && (
           <ul className="dropdown-menu">
-            <li><Link to="#" onClick={() => changeLanguage('en')}>{t('english')}</Link></li>
-            <li><Link to="#" onClick={() => changeLanguage('fi')}>{t('finnish')}</Link></li>
+            <li><Link to="#" onClick={() => {changeLanguage('en') ; handleLinkClick()}}>{t('english')}</Link></li>
+            <li><Link to="#" onClick={() => {changeLanguage('fi'); handleLinkClick()}}>{t('finnish')}</Link></li>
           </ul>
         )}
       </div>

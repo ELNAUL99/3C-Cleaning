@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import '../styles/_contact.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBuilding, faEnvelope, faMapLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faAddressCard, faBuilding, faEnvelope, faMapLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
 
 const Contact: React.FC = () => {
@@ -157,7 +157,8 @@ const Contact: React.FC = () => {
         </div>
         <div className="contact-info-section">
           <h2>{t('contactInformation')}</h2>
-          <p><FontAwesomeIcon icon={faBuilding} />  3C Cleaning Oy</p>
+          <p><FontAwesomeIcon icon={faBuilding} />  3C Cleaning</p>
+          <p><FontAwesomeIcon icon={faAddressCard}/> {t('businessID')} 3464149-8</p>
           <p><FontAwesomeIcon icon={faMapLocationDot} />  Ylismäentie 12 F 17, 02250 Espoo, Finland</p>
           <p><FontAwesomeIcon icon={faEnvelope} />  3ccleaningpro@gmail.com</p>
           <p><FontAwesomeIcon icon={faPhone}/>  +358 45 1438656</p>

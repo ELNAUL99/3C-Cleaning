@@ -29,6 +29,10 @@ const Faq: React.FC = () => {
       question: t('faq5Question'),
       answer: t('faq5Answer'),
     },
+    {
+      question: t('faq6Question'),
+      answer: t('faq6Answer'),
+    },
   ];
 
   const toggleFaq = (index: number) => {

@@ -36,6 +36,8 @@
   "faq4Answer": "Pets are not a problem! Please inform our customer service team about pets and ensure our staff can enter safely and do the cleaning work peacefully.",
   "faq5Question": "What if something gets broken or damaged during the cleaning process?",
   "faq5Answer": "The safety of your home is our top priority. We have comprehensive liability insurance to cover any damage.",
+  "faq6Question": "Who will provide the cleaning equipments and tools for the home cleaning?",
+  "faq6Answer": "We provide all cleaning supplies and eco-friendly cleaning products. We will use your home’s vacuum cleaner, mop, and bucket.",
   "orderNowHeading": "Order Now",
   "orderIntro": "Let us know your cleaning needs, and we'll get back to you soon.",
   "name": "Name",
@@ -156,5 +158,6 @@
   "companyName": "Company Name",
   "officeCleaningPrice": "Office cleaning price",
   "officeCleaningCost": "What office cleaning costs?",
-  "officeCleaningHourlyRate": "Starting from 29 €/h + VAT"
+  "officeCleaningHourlyRate": "Starting from 29 €/h + VAT",
+  "businessID": "Business ID:"
 }

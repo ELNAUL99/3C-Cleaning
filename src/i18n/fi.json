@@ -36,6 +36,8 @@
   "faq4Answer": "Lemmikit eivät ole ongelma! Ilmoita asiakaspalvelutiimillemme lemmikeistä ja varmista, että henkilökuntamme pääsee turvallisesti sisään ja voi tehdä siivoustyön rauhassa.",
   "faq5Question": "Entä jos jotain menee rikki tai vahingoittuu siivouksen aikana?",
   "faq5Answer": "Kotisi turvallisuus on meille ensisijaisen tärkeää. Meillä on kattava vastuuvakuutus, joka kattaa mahdolliset vahingot.",
+  "faq6Question": "Kuka tuo siivousvälineet ja puhdistusaineet kotisiivoukseen?",
+  "faq6Answer": "Tuomme kotisiivouksiin kaikki pienemmät siivousvälineet ja ekologiset puhdistusaineet. Sinulta tarvitsemme imurin, mopin ja siivoussangon.",
   "orderNowHeading": "Varaa nyt",
   "orderIntro": "Kerro meille siivoustarpeistasi, niin otamme sinuun pian yhteyttä.",
   "name": "Nimi",
@@ -160,5 +162,6 @@
   "companyName": "Yrityksen nimi",
   "officeCleaningPrice": "Toimistosiivouksen hinta",
   "officeCleaningCost": "Mitä toimistosiivous maksaa?",
-  "officeCleaningHourlyRate": "Alkaen 29 €/h + alv"
+  "officeCleaningHourlyRate": "Alkaen 29 €/h + alv",
+  "businessID": "Y-tunnus:"
 }

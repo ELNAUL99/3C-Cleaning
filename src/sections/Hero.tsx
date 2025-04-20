@@ -41,6 +41,9 @@ const Hero: React.FC = () => {
         <h2>
           {t('your')} <span className={`changing-word ${animationClass}`}>{currentWord}</span> {t('cleaningService')}
         </h2>
+        <h3 className="hero-subtitle">
+          {t('providedIn')}
+        </h3>
         <div className="hero-buttons">
           <Link to="/aboutus" className="hero-button">{t('learnMore')}</Link>
           <ScrollLink to="order-section" smooth={true} duration={1000} className="hero-button primary">{t('orderNow')}</ScrollLink>

@@ -44,6 +44,12 @@
       }
     }
 
+    h3.hero-subtitle {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+    }
+
     .hero-buttons {
       display: flex;
       gap: 5rem;
@@ -78,6 +84,10 @@
         font-size: 2rem;
       }
 
+      h3.hero-subtitle {
+        font-size: 1.75rem;
+      }
+
       .hero-buttons {
         gap: 2rem;
 
@@ -95,6 +105,10 @@
 
       h2 {
         font-size: 1.75rem;
+      }
+
+      h3.hero-subtitle {
+        font-size: 1.5rem;
       }
 
       .hero-buttons {
@@ -117,6 +131,10 @@
 
       h2 {
         font-size: 1.5rem;
+      }
+
+      h3.hero-subtitle {
+        font-size: 1.3rem;
       }
 
       .hero-buttons {

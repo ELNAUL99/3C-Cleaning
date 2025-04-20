@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
       <nav className="footer-nav">
         <ul>
           <li><Link to="/">{t('home')}</Link></li>
-          <li><Link to="/services">{t('services')}</Link></li>
+          <li><Link to="/home-cleaning-services">{t('services')}</Link></li>
           <li><Link to="/aboutus">{t('aboutUs')}</Link></li>
           <li><Link to="/contact">{t('contactUs')}</Link></li>
         </ul>

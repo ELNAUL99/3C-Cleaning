@@ -159,7 +159,7 @@ const Contact: React.FC = () => {
           <h2>{t('contactInformation')}</h2>
           <p><FontAwesomeIcon icon={faBuilding} />  3C Cleaning</p>
           <p><FontAwesomeIcon icon={faAddressCard}/> {t('businessID')} 3464149-8</p>
-          <p><FontAwesomeIcon icon={faMapLocationDot} />  Ylismäentie 12 F 17, 02250 Espoo, Finland</p>
+          <p><FontAwesomeIcon icon={faMapLocationDot} />  Ylismäentie 12F, 02250 Espoo, Finland</p>
           <p><FontAwesomeIcon icon={faEnvelope} />  3ccleaningpro@gmail.com</p>
           <p><FontAwesomeIcon icon={faPhone}/>  +358 45 1438656</p>
         </div>

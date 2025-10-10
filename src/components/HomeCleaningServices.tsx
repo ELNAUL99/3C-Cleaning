@@ -32,6 +32,7 @@ const HomeCleaningServices: React.FC = () => {
         </div>
         <div className="offer-section">
           <div className="offer-caption">{t('firstTimeCustomerOffer')}</div>
+          <p className="season-note">{t('highDemandNote')}</p>
           <div className="packages">
             <div className="package first-time">
               <div className="offer-notification">

@@ -212,7 +212,7 @@
 
     .offer-section {
       text-align: center;
-      margin: 5rem 0;
+      margin: 3rem 0 1.5rem 0;
 
       .offer-caption {
         font-size: 3rem;
@@ -225,64 +225,59 @@
         justify-content: center;
         gap: 2rem;
         margin-top: 2rem;
+        flex-wrap: wrap;
 
-        .package {
-          border: 1px solid #ddd;
-          padding: 2rem; 
-          border-radius: 0.5rem;
+        .package-card {
+          width: min(380px, 90%);
+          background: #ffffff;
+          border-radius: 1rem;
+          padding: 2rem;
+          box-shadow: 0 6px 18px rgba(0,0,0,0.12);
           position: relative;
-          width: 350px; 
-          background-color: #f0f8ff;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          text-align: center;
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
 
-          .offer-notification {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 0;
-            border-left: 100px solid #e74c3c; 
-            border-bottom: 100px solid transparent;
-            color: #fff;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transform-origin: left top;
-            border-radius: 0.5rem 0 0 0;
-
-            span {
-              position: absolute;
-              top: 1.5rem; 
-              left: -5.75rem; 
-              white-space: nowrap;
-              transform: rotate(315deg); 
-            }
+          &:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.18);
           }
 
-          h3 {
-            font-size: 1.5rem;
+          .card-header h3 {
+            font-size: 1.6rem;
+            font-weight: 800;
             margin-bottom: 1rem;
+            color: #354d40;
           }
 
-          p {
-            font-size: 1rem;
-          }
-
-          .offer-price {
-            font-size: 1.8rem;
+          .card-price span {
+            font-size: 2.4rem;
             font-weight: 900;
             color: #d32f2f;
           }
+        }
 
-          .note {
-            margin-top: 1rem;
-            font-style: italic;
-          }
+        .featured {
+          background: linear-gradient(135deg, #f0f8ff, #e8f5f1);
+          border: 2px solid #aad2ba;
 
-          &.first-time {
-            background-color: #f0f8ff;
+          .badge {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            background: #e74c3c;
+            color: #fff;
+            padding: 0.4rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
           }
+        }
+        .VAT-note {
+          font-size: 0.9rem;
+          color: #161515;
+          margin-top: 0.5rem;
+          font-style: italic;
         }
       }
     }

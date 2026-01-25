@@ -31,27 +31,28 @@ const HomeCleaningServices: React.FC = () => {
           </div>
         </div>
         <div className="offer-section">
-          <div className="offer-caption">{t('firstTimeCustomerOffer')}</div>
-          <p className="season-note">{t('highDemandNote')}</p>
-          <div className="packages">
-            <div className="package first-time">
-              <div className="offer-notification">
-                <span>43% off</span>
+          <div className="offer-caption"></div>
+          <p className="season-note"></p>
+          <div className="packages"> 
+            <div className="package-card"> 
+              <div className="card-header"> 
+                <h3>{t('Package1')}</h3> 
               </div>
-              <h3>{t('firstTimePackage1')}</h3>
-              <p className='offer-price'>{t('firstTimePackage1Price')}</p>
-              <p>{t('homeCleaningServices')}</p>
-              <p className="note">{t('firstTimePackageNote')}</p>
-            </div>
-            <div className="package first-time">
-              <div className="offer-notification">
-                <span>47% off</span>
-              </div>
-              <h3>{t('firstTimePackage2')}</h3>
-              <p className='offer-price'>{t('firstTimePackage2Price')}</p>
-              <p>{t('homeCleaningServices')}</p>
-              <p className="note">{t('firstTimePackageNote')}</p>
-            </div>
+              <div className="card-price"> 
+                <span>{t('Package1Price')}*</span> 
+                <p className="VAT-note">{t('VATCleaningNote')}</p>
+              </div> 
+            </div> 
+            <div className="package-card featured"> 
+              <div className="badge">Tarjous</div> 
+              <div className="card-header"> 
+                <h3>{t('Package2')}</h3> 
+              </div> 
+              <div className="card-price"> 
+                <span>{t('Package2Price')}*</span> 
+                <p className="VAT-note">{t('VATCleaningNote')}</p>
+              </div> 
+            </div> 
           </div>
         </div>
         <ServiceInclude />

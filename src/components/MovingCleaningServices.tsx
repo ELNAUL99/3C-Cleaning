@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import '../styles/_movingServices.scss';
 import MovingServiceInclude from '../sections/MovingServiceInclude';
 import { useTranslation } from 'react-i18next';
@@ -10,7 +11,13 @@ const MovingCleaningServices: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="movingServices">
+    <>
+      <Helmet>
+        <title>Muuttosiivous Helsinki | 3C Cleaning</title>
+        <meta name="description" content="Ammattimainen muuttosiivous Helsingissä ja ympäristössä. Nopea ja huolellinen palvelu. Aloita 80€/tunti. Ilmainen tarjous!" />
+        <link rel="canonical" href="https://www.3ccleaning.fi/moving-cleaning-services" />
+      </Helmet>
+      <section className="movingServices">
       <div className="services-heading">
         <h2>{t('movingCleaningServices')}</h2>
       </div>
@@ -36,7 +43,7 @@ const MovingCleaningServices: React.FC = () => {
             <p className="paragraph">{t('movingParagraph')}</p>
           </div>
           <div className="image">
-            <img src={movingImage} alt="Slogan" />
+            <img src={movingImage} alt="Ammattimainen muuttosiivous Helsingissä - 3C Cleaning" loading="lazy" />
           </div>
         </div>
         <MovingServiceInclude />
@@ -45,6 +52,7 @@ const MovingCleaningServices: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

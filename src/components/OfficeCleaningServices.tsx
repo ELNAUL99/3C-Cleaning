@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import emailjs from 'emailjs-com';
 import '../styles/_order.scss';
 import { useTranslation } from 'react-i18next';
@@ -52,7 +53,13 @@ const OfficeCleaningServices: React.FC = () => {
   };
 
   return (
-    <section className="officeServices">
+    <>
+      <Helmet>
+        <title>Toimistosiivous Helsinki | 3C Cleaning</title>
+        <meta name="description" content="Ammattimainen toimistosiivous Helsingissä ja ympäristössä. Palvelumme sopeutuu liiketoiminnallesi. Ilmainen tarjous!" />
+        <link rel="canonical" href="https://www.3ccleaning.fi/office-cleaning-services" />
+      </Helmet>
+      <section className="officeServices">
       <div className="services-heading">
         <h2>{t('officeCleaningServicesHeading')}</h2>
       </div>
@@ -149,7 +156,7 @@ const OfficeCleaningServices: React.FC = () => {
         </div>
         <div className="slogan-container">
           <div className="image">
-            <img src={officeSloganImage} alt="Slogan" />
+            <img src={officeSloganImage} alt="Toimistosiivouspalvelut - puhdas ja ammattimainen työväli" loading="lazy" />
           </div>
           <div className="text">
             <h3 className="slogan">{t('officeSloganTitle')}</h3>
@@ -159,6 +166,7 @@ const OfficeCleaningServices: React.FC = () => {
         <OfficeServiceInclude />
       </div>
     </section>
+    </>
   );
 };
 

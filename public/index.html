@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/logo.jpeg" />
@@ -7,18 +7,54 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="We Clean, You Relax"
+      content="3C Cleaning tarjoaa ammattimaiset kotisiivous-, muuttosiivous- ja toimistosiivouspalvelut Helsingissä, Espoossa, Vantaalla ja Kauniaisissa. Pyydä ilmainen tarjous!"
     />
+    <meta name="keywords" content="siivouspalvelu Helsinki, kotisiivous, muuttosiivous, toimistosiivous, siivous Espoo, siivous Vantaa, siivous Kauniainen, puhdistuspalvelut" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Resource Hints for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" as="style" />
+
     <link rel="apple-touch-icon" href="public/logo.jpeg" />
     <link rel="icon" href="%PUBLIC_URL%/logo.ico" type="image/x-icon">
     <link rel="shortcut icon" href="%PUBLIC_URL%/logo.ico" type="image/x-icon">
 
     <!-- Open Graph meta tags for link preview -->
     <meta property="og:title" content="3C Cleaning - Ystävälliset siivouspalvelut" />
-    <meta property="og:description" content="We Clean, You Relax" />
+    <meta property="og:description" content="Ammattimaiset kotisiivous-, muuttosiivous- ja toimistosiivouspalvelut Helsingin seudulla. Ilmainen tarjous!" />
     <meta property="og:image" content="%PUBLIC_URL%/logo.jpeg" />
     <meta property="og:url" content="https://www.3ccleaning.fi" />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fi_FI" />
+
+    <!-- Structured Data (JSON-LD) for LocalBusiness schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "3C Cleaning Oy",
+      "image": "https://www.3ccleaning.fi/logo.jpeg",
+      "url": "https://www.3ccleaning.fi",
+      "telephone": "+358451438656",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Helsinki",
+        "addressRegion": "Uusimaa",
+        "addressCountry": "FI"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 60.1699,
+        "longitude": 24.9384
+      },
+      "areaServed": ["Helsinki", "Espoo", "Vantaa", "Kauniainen"],
+      "serviceType": ["Kotisiivous", "Muuttosiivous", "Toimistosiivous"],
+      "priceRange": "€€"
+    }
+    </script>
+
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -35,6 +71,15 @@
     -->
     <title>3C Cleaning</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRJ3HWNBGS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LRJ3HWNBGS');
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

@@ -71,7 +71,7 @@ const Header: React.FC = () => {
     <header className="header">
       <div className="left-logo">
         <Link to="/" onClick={() => location.pathname === '/' && scrollToTop()}>
-          <img src={wordLogo} alt="3C Cleaning Word Logo" />
+          <img src={wordLogo} alt="3C Cleaning - Siivouspalvelut" loading="lazy" />
         </Link>
       </div>
       <nav className={menuOpen ? 'open' : ''} ref={menuRef}>
@@ -89,7 +89,7 @@ const Header: React.FC = () => {
           </li>
         </ul>
         <div className="center-logo">
-          <img src={logo} alt="3C Cleaning Image Logo" />
+          <img src={logo} alt="3C Cleaning logo" loading="lazy" />
         </div>
         <ul className="nav-right">
           <li><Link to="/aboutus" onClick={handleLinkClick}>{t('aboutUs')}</Link></li>

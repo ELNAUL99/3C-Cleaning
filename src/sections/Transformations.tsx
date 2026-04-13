@@ -61,11 +61,11 @@ const Transformations: React.FC = () => {
         <div className="transformation-item">
           <div className="transformation-before">
             <h3>{t('before')}</h3>
-            <img src={transformations[currentIndex].before} alt={`Before Transformation ${currentIndex + 1}`} className="transformation-image" />
+            <img src={transformations[currentIndex].before} alt={`Ennen siivoustoimenpiteitä - transformaatio ${currentIndex + 1}`} className="transformation-image" loading="lazy" />
           </div>
           <div className="transformation-after">
             <h3>{t('after')}</h3>
-            <img src={transformations[currentIndex].after} alt={`After Transformation ${currentIndex + 1}`} className="transformation-image" />
+            <img src={transformations[currentIndex].after} alt={`Jälkeen 3C Cleaning siivoustoimenpiteiden - transformaatio ${currentIndex + 1}`} className="transformation-image" loading="lazy" />
           </div>
         </div>
         <button className="next-btn" onClick={handleNext}>❯</button>

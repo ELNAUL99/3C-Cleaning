@@ -52,7 +52,7 @@ const Order: React.FC = () => {
       <h2>{t('orderNowHeading')}</h2>
       <div className="book-container">
         <div className="book-image">
-          <img src={orderImage} alt={t('orderImageAlt')} />
+          <img src={orderImage} alt={t('orderImageAlt')} loading="lazy" />
         </div>
         <div className="book-form">
           <p className="form-intro">{t('orderIntro')}</p>

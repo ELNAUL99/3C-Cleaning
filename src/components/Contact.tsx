@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import emailjs from 'emailjs-com';
 import '../styles/_contact.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -52,7 +53,13 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section className="contact-us">
+    <>
+      <Helmet>
+        <title>Ota yhteyttä | 3C Cleaning</title>
+        <meta name="description" content="Ota yhteyttä 3C Cleaningiin. Vastaamme kaikkiin kyselyihin nopeasti. Soita tai täytä yhteydenottolomake." />
+        <link rel="canonical" href="https://www.3ccleaning.fi/contact" />
+      </Helmet>
+      <section className="contact-us">
       <div className="contact-heading">
         <h2>{t('contactUsHeading')}</h2>
       </div>
@@ -168,6 +175,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

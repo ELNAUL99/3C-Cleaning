@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import '../styles/_aboutus.scss';
 import cleanImage from '../assets/aboutus1.png'; 
 import caringImage from '../assets/aboutus2.jpg';
@@ -9,7 +10,13 @@ const AboutUs: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="about-us">
+    <>
+      <Helmet>
+        <title>Tietoa meistä | 3C Cleaning</title>
+        <meta name="description" content="Tuntutustu 3C Cleaningin tiimiin. Ammattimainen siivouspalvelu perustuu luotettavuuteen, huolenpitoon ja iloiseen asenteeseen." />
+        <link rel="canonical" href="https://www.3ccleaning.fi/aboutus" />
+      </Helmet>
+      <section className="about-us">
       <div className="about-heading">
         <h2>{t('aboutUsHeading')}</h2>
       </div>
@@ -23,7 +30,7 @@ const AboutUs: React.FC = () => {
               <p>{t('cleaningContent')}</p>
             </div>
             <div className="about-image">
-              <img src={cleanImage} alt="Clean" loading="lazy"/>
+              <img src={cleanImage} alt="3C Cleaning palvelun puhtaus ja laatu" loading="lazy" />
             </div>
           </div>
           <div className="about-item reverse">
@@ -32,7 +39,7 @@ const AboutUs: React.FC = () => {
               <p>{t('caringContent')}</p>
             </div>
             <div className="about-image">
-              <img src={caringImage} alt="Caring" loading="lazy"/>
+              <img src={caringImage} alt="Huolellinen siivouspalvelu - huolenpito on meille tärkeää" loading="lazy" />
             </div>
           </div>
           <div className="about-item">
@@ -41,12 +48,13 @@ const AboutUs: React.FC = () => {
               <p>{t('cheerfulContent')}</p>
             </div>
             <div className="about-image">
-              <img src={cheerfulImage} alt="Cheerful" loading="lazy"/>
+              <img src={cheerfulImage} alt="Iloinen ja ammattitaitoinen siivoustiimi" loading="lazy" />
             </div>
           </div>
         </div>
       </div>
     </section>
+    </>
   );
 };
 

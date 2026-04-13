@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import '../styles/_homeServices.scss';
 import { Link as ScrollLink } from 'react-scroll';
 import ServiceInclude from '../sections/ServiceInclude';
@@ -10,7 +11,13 @@ const HomeCleaningServices: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="homeServices">
+    <>
+      <Helmet>
+        <title>Kotisiivous Helsinki | 3C Cleaning</title>
+        <meta name="description" content="Ammattimaiset kotisiivouspalvelut Helsingissä, Espoossa, Vantaalla ja Kauniaisissa. Aloita 80€/tunti. Pyydä ilmainen tarjous!" />
+        <link rel="canonical" href="https://www.3ccleaning.fi/home-cleaning-services" />
+      </Helmet>
+      <section className="homeServices">
       <div className="services-heading">
         <h2>{t('homeCleaningServices')}</h2>
       </div>
@@ -71,7 +78,7 @@ const HomeCleaningServices: React.FC = () => {
             <p>{t('taxCreditSavings')}</p>
           </div>
           <div className="fact-image">
-            <img src={interestingFactImage} alt="Interesting Fact" />
+            <img src={interestingFactImage} alt="Verotukisen kotisiivouspalvelun säästöt ja hyödyt" loading="lazy" />
           </div>
         </div>
         <div id="order-form">
@@ -79,6 +86,7 @@ const HomeCleaningServices: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
